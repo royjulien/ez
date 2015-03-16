@@ -1,19 +1,22 @@
-@charset "UTF-8";
+@charset "utf-8";
 
 // Mixins
-@import "scss/mixins";
-@import "scss/colors";
+@import "mixins";
+
+// Typography and Colors
+@import "typography";
+@import "colors";
 
 // Reset
-@import "scss/reset";
+@import "reset";
 
 // Components
-@import "scss/buttons";
-@import "scss/forms";
+@import "buttons";
+@import "forms";
 
 // Animations
-@import "scss/animations";
+@import "animations";
 
 // Layouts
-@import "scss/grid";
-@import "scss/modals";
+@import "grid";
+@import "modals";
