@@ -1,0 +1,137 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: $b-80;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.3;
+  @include font-smooth;
+}
+
+div,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+  @include box-sizing;
+}
+
+ul,
+li,
+img,
+input,
+textarea,
+button {
+  @include box-sizing;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: $b-70;
+  &:hover {
+    color: $dark-green;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
+button {
+  overflow: visible;
+}
+
+input {
+  @include border-radius;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+textarea {
+  overflow: auto;
+}

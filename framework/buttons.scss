@@ -1,0 +1,114 @@
+/*-------------------------*\
+ * BUTTONS */
+/*------------------------- */
+.button {
+  padding: 10px 20px;
+  border: 1px solid;
+  @include border-radius;
+  background: none;
+  font-size: 13px;
+  color: $b-60;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+  @include transition(box-shadow 233ms);
+  &:hover {
+    box-shadow: 0 1px 2px 0 $b-10, 0 4px 8px 0 $b-20;
+  }
+}
+
+button,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button {
+  @extend .button;
+  @include retina {
+    font-weight: 400;
+  }
+
+  i {
+    float: left;
+    margin-right: 10px;
+    font-size: 19px;
+  }
+  &.fill {
+    border: none;
+    background-color: $b-05;
+    color: $b-60;
+  }
+  &.green {
+    color: $green;
+  }
+  &.green-fill {
+    border: none;
+    background-color: $green;
+    color: $w;
+  }
+  &.dark-green {
+    color: $dark-green;
+  }
+  &.dark-green-fill {
+    border: none;
+    background-color: $dark-green;
+    color: $w;
+  }
+  &.tomato {
+    color: $tomato;
+  }
+  &.tomato-fill {
+    border: none;
+    background-color: $tomato;
+    color: $w;
+  }
+  &.red {
+    color: $red;
+  }
+  &.red-fill {
+    border: none;
+    background-color: $red;
+    color: $w;
+  }
+  &.follow,
+  &.join {
+    margin: 30px;
+    border: none;
+    background-color: $dark-green;
+    color: $w;
+  }
+  &.explore {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    font-size: 22px;
+  }
+  &.added {
+    background-color: $b-05 !important;
+    color: $b-60 !important;
+  }
+  &.edit {
+    float: right;
+    height: 28px;
+    padding: 0 20px;
+    margin-top: 4px;
+    margin-right: 30px;
+    background-color: $w;
+    color: $tomato;
+    line-height: 1;
+  }
+  &.save-button {
+    float: right;
+    border: none;
+    background-color: $dark-green;
+    color: $w;
+  }
+}
+
+.top-bar-container {
+  button {
+    margin: 14px 7px;
+    border: none;
+  }
+}
