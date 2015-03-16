@@ -60,7 +60,11 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
+
+  @include retina {
+    font-weight: 300;
+  }
 }
 
 b,
