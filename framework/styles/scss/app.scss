@@ -3,12 +3,16 @@
 // Mixins
 @import "mixins";
 
-// Typography and Colors
+// Typography, Icons, and Colors
 @import "typography";
+@import "icons";
 @import "colors";
 
 // Reset
 @import "reset";
+
+// Globals
+@import "globals";
 
 // Components
 @import "buttons";

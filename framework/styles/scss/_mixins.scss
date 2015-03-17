@@ -1,7 +1,6 @@
-/*-------------------------*\
- * MEDIA QUERIES */
+/*------------------------- *\
+ * MEDIA QUERIES
 /*------------------------- */
-
 // Acceptable values
 // 480px  : mobile
 // 640px  : tablet small
@@ -48,7 +47,7 @@
 }
 
 /*-------------------------*\
- * BOX-MODEL */
+ * BOX-MODEL
 /*------------------------- */
 @mixin box-sizing($boxmodel: border-box) {
   -webkit-box-sizing: $boxmodel;
@@ -57,7 +56,7 @@
 }
 
 /*-------------------------*\
- * CLEARFIX */
+ * CLEARFIX
 /*------------------------- */
 @mixin clearfix {
   &:before,
@@ -71,7 +70,7 @@
 }
 
 /*-------------------------*\
- * VISIBILITY */
+ * VISIBILITY
 /*------------------------- */
 @mixin backface-visibility($visibility) {
   -webkit-backface-visibility: $visibility;
@@ -80,7 +79,7 @@
 }
 
 /*-------------------------*\
- * USER-SELECT */
+ * USER-SELECT
 /*------------------------- */
 @mixin user-select($select) {
   -webkit-user-select: $select;
@@ -91,7 +90,7 @@
 }
 
 /*-------------------------*\
- * TYPOGRAPHY */
+ * TYPOGRAPHY
 /*------------------------- */
 @mixin font-smooth {
   -webkit-font-smoothing: antialiased;
@@ -140,17 +139,29 @@
 }
 
 /*-------------------------*\
- * BACKGROUND-COVER */
+ * BACKGROUND-COVER
 /*------------------------- */
-@mixin background-cover {
+@mixin bg-cover($bg-xpos: center, $bg-ypos: center) {
   background-size: 100%;
   background-size: cover;
-  background-position: center 15%;
+  background-position: $bg-xpos $bg-ypos;
   background-repeat: no-repeat;
+}
+@mixin bg-fade($color: null, $opacity: null) {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    opacity: $opacity;
+  }
 }
 
 /*-------------------------*\
- * BORDER-RADIUS */
+ * BORDER-RADIUS
 /*------------------------- */
 @mixin border-radius($radius: 2px) {
   -webkit-border-radius: $radius;
@@ -159,7 +170,7 @@
 }
 
 /*-------------------------*\
- * BOX-SHADOW */
+ * BOX-SHADOW
 /*------------------------- */
 @mixin box-shadow($shadow) {
   -webkit-box-shadow: $shadow;
@@ -168,29 +179,7 @@
 }
 
 /*-------------------------*\
- * GRADIENTS */
-/*------------------------- */
-@mixin linear-gradient($start-color, $end-color) {
-  background: -webkit-linear-gradient($start-color, $end-color);
-  background: -moz-linear-gradient($start-color, $end-color);
-  background: -o-linear-gradient($start-color, $end-color);
-  background: -ms-linear-gradient($start-color, $end-color);
-  background: linear-gradient($start-color, $end-color);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1);
-}
-
-@mixin gradient-directional-four-colors($angle, $start-color, $start-location, $mid-color, $mid-location, $mid-color-2, $mid-location-2, $end-color, $end-location) {
-  background: $mid-color-2;
-  background: -webkit-linear-gradient($angle, $start-color $start-location, $mid-color $mid-location, $mid-color-2 $mid-location-2, $end-color $end-location);
-  background: -moz-linear-gradient($angle, $start-color $start-location, $mid-color $mid-location, $mid-color-2 $mid-location-2, $end-color $end-location);
-  background: -o-linear-gradient($angle, $start-color $start-location, $mid-color $mid-location, $mid-color-2 $mid-location-2, $end-color $end-location);
-  background: -ms-linear-gradient($angle, $start-color $start-location, $mid-color $mid-location, $mid-color-2 $mid-location-2, $end-color $end-location);
-  background: linear-gradient($angle, $start-color $start-location, $mid-color $mid-location, $mid-color-2 $mid-location-2, $end-color $end-location);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start-color', endColorstr='$end-color', GradientType=1);
-}
-
-/*-------------------------*\
- * FILTERS */
+ * FILTERS
 /*------------------------- */
 @mixin filter($filter-type, $filter-amount) {
   -webkit-filter: $filter-type + unquote("(#{$filter-amount})");
@@ -208,7 +197,7 @@
 }
 
 /*-------------------------*\
- * TRANSFORMERS ;) */
+ * TRANSFORMERS ;)
 /*------------------------- */
 @mixin transform($content) {
   -webkit-transform: $content;
@@ -226,22 +215,7 @@
 }
 
 /*-------------------------*\
- * FLIPPER DA DOLPHIN */
-/*------------------------- */
-@mixin flipY {
-  @include transform(scaleY(-1));
-  -ms-filter: "FlipV";
-  filter: FlipV;
-}
-
-@mixin flipX {
-  @include transform(scaleX(-1));
-  -ms-filter: "FlipH";
-  filter: FlipH;
-}
-
-/*-------------------------*\
- * ROTATIONS */
+ * ROTATIONS
 /*------------------------- */
 @mixin rotate($degrees, $origin: null) {
   @include transform(rotate($degrees));
@@ -257,7 +231,7 @@
 }
 
 /*-------------------------*\
- * MORPHING */
+ * MORPHING
 /*------------------------- */
 @mixin scale($scale-args) {
   @include transform(scale($scale-args));
@@ -268,7 +242,7 @@
 }
 
 /*-------------------------*\
- * TRANSLATIONS */
+ * TRANSLATIONS
 /*------------------------- */
 @mixin translate($x, $y) {
   @include transform(translate($x, $y));
@@ -291,13 +265,13 @@
 }
 
 /*-------------------------*\
- * TRANSITIONS */
+ * TRANSITIONS
 /*------------------------- */
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
+@mixin transition($t1:null, $t2:null, $t3:null, $t4:null) {
+  -webkit-transition: $t1, $t2, $t3, $t4;
+  -moz-transition: $t1, $t2, $t3, $t4;
+  -o-transition: $t1, $t2, $t3, $t4;
+  transition: $t1, $t2, $t3, $t4;
 }
 
 @mixin transition-property($transition-property) {
@@ -322,7 +296,7 @@
 }
 
 /*-------------------------*\
- * PERSPECTIVES */
+ * PERSPECTIVES
 /*------------------------- */
 @mixin perspective($perspective) {
   -webkit-perspective: $perspective;
@@ -337,7 +311,7 @@
 }
 
 /*-------------------------*\
- * ANIMATIONS */
+ * ANIMATIONS
 /*------------------------- */
 @mixin animation($animation) {
   -webkit-animation: $animation;
@@ -389,7 +363,7 @@
 }
 
 /*-------------------------*\
- * KEYFRAMES */
+ * KEYFRAMES
 /*------------------------- */
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
