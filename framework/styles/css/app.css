@@ -1,92 +1,229 @@
-/*------------------------- *\
- * MEDIA QUERIES
+@charset "UTF-8";
+/*-------------------------*\
+ * BOX-MODEL */
 /*------------------------- */
 /*-------------------------*\
- * BOX-MODEL
+ * VISIBILITY */
 /*------------------------- */
 /*-------------------------*\
- * CLEARFIX
+ * USER-SELECT */
 /*------------------------- */
 /*-------------------------*\
- * VISIBILITY
+ * TYPOGRAPHY */
 /*------------------------- */
 /*-------------------------*\
- * USER-SELECT
+ * BORDER-RADIUS */
 /*------------------------- */
 /*-------------------------*\
- * TYPOGRAPHY
+ * BOX-SHADOW */
 /*------------------------- */
 /*-------------------------*\
- * BACKGROUND-COVER
+ * FILTERS */
 /*------------------------- */
 /*-------------------------*\
- * BORDER-RADIUS
+ * TRANSFORMERS ;) */
 /*------------------------- */
 /*-------------------------*\
- * BOX-SHADOW
+ * ROTATIONS */
 /*------------------------- */
 /*-------------------------*\
- * FILTERS
+ * MORPHING */
 /*------------------------- */
 /*-------------------------*\
- * TRANSFORMERS ;)
+ * TRANSLATIONS */
 /*------------------------- */
 /*-------------------------*\
- * ROTATIONS
+ * TRANSITIONS */
 /*------------------------- */
 /*-------------------------*\
- * MORPHING
+ * PERSPECTIVES */
 /*------------------------- */
 /*-------------------------*\
- * TRANSLATIONS
+ * ANIMATIONS */
 /*------------------------- */
 /*-------------------------*\
- * TRANSITIONS
+ * KEYFRAMES */
 /*------------------------- */
 /*-------------------------*\
- * PERSPECTIVES
+ * MEDIA QUERIES */
 /*------------------------- */
 /*-------------------------*\
- * ANIMATIONS
+ * CLEARFIX */
 /*------------------------- */
 /*-------------------------*\
- * KEYFRAMES
+ * BACKGROUND-COVER */
 /*------------------------- */
+/*-------------------------*\
+ * W ICONS */
+/*------------------------- */
+html,
+body {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "ProximaNova", "Open Sans", sans-serif;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
+div,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ul,
+li,
+img,
+input,
+textarea,
+button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+figure {
+  margin: 0; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  outline: none; }
+
+button,
+button:focus,
+button:active {
+  outline: none;
+  overflow: visible; }
+
+input {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+input {
+  line-height: normal; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+textarea {
+  overflow: auto; }
+
 @font-face {
-  font-family: 'ProximaNova';
+  font-family: "ProximaNova";
   src: url("https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.eot");
   src: url("https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.eot?#iefix") format("embedded-opentype"), url("https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.woff") format("woff"), url("https://cdn2.editmysite.com/fonts/Proxima-Light/267447_4_0.ttf") format("truetype"); }
 @font-face {
-  font-family: 'ProximaNova';
+  font-family: "ProximaNova";
   font-weight: bold;
   src: url("https://cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.eot");
   src: url("https://cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.eot?#iefix") format("embedded-opentype"), url("https://cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.woff") format("woff"), url("https://cdn2.editmysite.com/fonts/Proxima-Semibold/267447_5_0.ttf") format("truetype"); }
 @font-face {
-  font-family: 'thirsty_script_lightregular';
+  font-family: "thirsty_script_lightregular";
   src: url("https://cdn2.editmysite.com/fonts/ThirstyScriptLight/ThirstyScriptLight-webfont.eot");
   src: url("https://cdn2.editmysite.com/fonts/ThirstyScriptLight/ThirstyScriptLight-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdn2.editmysite.com/fonts/ThirstyScriptLight/ThirstyScriptLight-webfont.woff") format("woff"), url("https://cdn2.editmysite.com/fonts/ThirstyScriptLight/ThirstyScriptLight-webfont.ttf") format("truetype"), url("https://cdn2.editmysite.com/fonts/ThirstyScriptLight/ThirstyScriptLight-webfont.svg#thirsty_script_lightregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'wicons';
+  font-family: "wicons";
   src: url("https://cdn2.editmysite.com/fonts/wIcons/wicons.eot?buildTime=1426530185");
   src: url("https://cdn2.editmysite.com/fonts/wIcons/wicons.eot?buildTime=1426530185#iefix") format("embedded-opentype"), url("https://cdn2.editmysite.com/fonts/wIcons/wicons.woff?buildTime=1426530185") format("woff"), url("https://cdn2.editmysite.com/fonts/wIcons/wicons.ttf?buildTime=1426530185") format("truetype"), url("https://cdn2.editmysite.com/fonts/wIcons/wicons.svg?buildTime=1426530185#wicons") format("svg");
   font-weight: normal;
   font-style: normal;
-  /* Hack to smooth out font rendering on Chrome for Windows */
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    font-family: 'wicons';
+    font-family: "wicons";
     src: url("https://cdn2.editmysite.com/fonts/wIcons/wicons.svg?buildTime=1426530185#wicons") format("svg"); } }
 @font-face {
-  font-family: 'wsocial';
+  font-family: "wsocial";
   src: url("https://cdn2.editmysite.com/fonts/wSocial/wsocial.eot?buildTime=1426530185");
   src: url("https://cdn2.editmysite.com/fonts/wSocial/wsocial.eot?buildTime=1426530185#iefix") format("embedded-opentype"), url("https://cdn2.editmysite.com/fonts/wSocial/wsocial.woff?buildTime=1426530185") format("woff"), url("https://cdn2.editmysite.com/fonts/wSocial/wsocial.ttf?buildTime=1426530185") format("truetype"), url("https://cdn2.editmysite.com/fonts/wSocial/wsocial.svg?buildTime=1426530185#wsocial") format("svg");
   font-weight: normal;
   font-style: normal;
-  /* Hack to smooth out font rendering on Chrome for Windows */
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    font-family: 'wsocial';
+    font-family: "wsocial";
     src: url("https://cdn2.editmysite.com/fonts/wSocial/wsocial.svg?buildTime=1426530185#wsocial") format("svg"); } }
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7); }
+  a:hover {
+    color: rgba(0, 0, 0, 0.8); }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 300; } }
+
+b,
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+i {
+  line-height: 1.35; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace; }
+
 [class^="w-icon-"]:before {
   display: inline-block;
   font-family: "wicons";
@@ -819,142 +956,14 @@
   content: "\f1f0"; }
 
 .w-icon-youtube:before {
-  content: "\f11f "; }
+  content: "\f11f"; }
 
-html,
-body {
-  padding: 0;
-  margin: 0; }
-
-body {
-  font-family: "ProximaNova", "Open Sans", sans-serif;
-  line-height: 1.35;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility; }
-
-div,
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-ul,
-li,
-img,
-input,
-textarea,
-button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-figure {
-  margin: 0; }
-
-a {
-  background-color: transparent;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.7); }
-  a:hover {
-    color: rgba(0, 0, 0, 0.8); }
-
-ul {
+.divider {
+  height: 1px;
   margin: 0;
-  padding: 0; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
-  margin: 0;
-  font-weight: 400; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: 300; } }
-
-b,
-strong {
-  font-weight: bold; }
-
-em {
-  font-style: italic; }
-
-img {
-  border: 0; }
-
-i {
-  line-height: 1.35; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace; }
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
-  color: inherit;
-  outline: none; }
-
-button,
-button:focus,
-button:active {
-  outline: none;
-  overflow: visible; }
-
-input {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px; }
-
-button,
-select {
-  text-transform: none; }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-input {
-  line-height: normal; }
-
-input[type="search"] {
-  -webkit-appearance: textfield; }
-
-textarea {
-  overflow: auto; }
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  pointer-events: none; }
 
 .left {
   float: left; }
@@ -962,26 +971,58 @@ textarea {
 .right {
   float: right; }
 
-.logo {
+.logo--center {
   position: absolute;
-  top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: -1; }
-  .logo .w-icon-li-weebly-logo {
+  pointer-events: none; }
+  .logo--center .icon {
     display: inline-block;
-    height: 50px;
-    margin-top: 18px;
+    height: 35px;
     color: white;
-    font-size: 120px;
-    line-height: 0.5; }
+    font-size: 35px;
+    line-height: 1; }
+    .logo--center .icon:before {
+      content: "";
+      display: inline-block;
+      font-family: "wicons";
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      speak: none;
+      text-decoration: inherit;
+      text-transform: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility; }
+    @media screen and (min-width: 960px) {
+      .logo--center .icon {
+        height: 50px;
+        color: white;
+        font-size: 120px;
+        line-height: 0.4; }
+        .logo--center .icon:before {
+          content: "";
+          display: inline-block;
+          font-family: "wicons";
+          font-style: normal;
+          font-weight: 400;
+          font-variant: normal;
+          speak: none;
+          text-decoration: inherit;
+          text-transform: none;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizeLegibility; } }
 
-/*------------------------- *\
- * BUTTONS
+/*-------------------------*\
+ * BUTTONS */
 /*------------------------- */
 button,
 .btn {
@@ -993,6 +1034,7 @@ button,
   border-radius: 35px;
   background: none;
   color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.25px;
   font-weight: 600;
@@ -1000,17 +1042,10 @@ button,
   -moz-transition: color 177ms, border 177ms;
   -o-transition: color 177ms, border 177ms;
   transition: color 177ms, border 177ms;
-  cursor: pointer; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    button,
-    .btn {
-      font-weight: 400;
-      border-width: 1px; } }
-  button.fill,
-  .btn.fill {
-    border: none;
-    background-color: rgba(0, 0, 0, 0.05);
-    color: rgba(0, 0, 0, 0.6); }
+  cursor: pointer;
+  /*-------------------------*\
+   * BUTTON ICON */
+  /*------------------------- */ }
   button.white,
   .btn.white {
     border-color: rgba(255, 255, 255, 0.6);
@@ -1019,24 +1054,36 @@ button,
     .btn.white:hover {
       border-color: rgba(255, 255, 255, 0.8);
       color: white; }
-  button.white-fill,
-  .btn.white-fill {
-    border: none;
-    background-color: white;
-    color: rgba(0, 0, 0, 0.8); }
+    button.white--borderless,
+    .btn.white--borderless {
+      border: none;
+      color: rgba(255, 255, 255, 0.9); }
+    button.white--fill,
+    .btn.white--fill {
+      border: none;
+      background-color: white;
+      color: rgba(0, 0, 0, 0.8); }
   button i,
   .btn i {
     font-size: 17px; }
     button i.left,
     .btn i.left {
-      float: left;
       margin-left: -5px;
       margin-right: 5px; }
     button i.right,
     .btn i.right {
-      float: right;
       margin-left: 5px;
       margin-right: -5px; }
+    button i.w-icon-hamburger,
+    .btn i.w-icon-hamburger {
+      position: relative;
+      top: 1px; }
+    button i.w-icon-caret-down,
+    .btn i.w-icon-caret-down {
+      position: relative;
+      top: 4px;
+      font-size: 24px;
+      line-height: 0.9; }
 
 .container {
   max-width: 1280px;
@@ -1044,29 +1091,37 @@ button,
   margin: auto;
   overflow: hidden; }
 
-.cover .cover__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 46px;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-.cover .bg {
+.main-header {
+  clear: both;
+  height: 85px;
+  padding: 22px 0;
+  overflow: hidden; }
+  .main-header__menu {
+    float: left; }
+    .main-header__menu .white--borderless {
+      padding: 7px 3px; }
+  .main-header__menu--user {
+    float: right; }
+    .main-header__menu--user button:last-child {
+      display: none; }
+      @media screen and (min-width: 768px) {
+        .main-header__menu--user button:last-child {
+          display: inline-block; } }
+
+.header--tall {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 30vw;
+  min-height: 350px;
+  height: 35%;
   background-size: 100%;
   background-size: cover;
   background-position: center 78%;
   background-repeat: no-repeat;
   z-index: -1; }
-  .cover .bg:before {
-    content: '';
+  .header--tall:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -1074,5 +1129,57 @@ button,
     height: 100%;
     background-color: #4383bb;
     opacity: 0.85; }
+.header--short {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 350px;
+  height: 25%;
+  background-size: 100%;
+  background-size: cover;
+  background-position: center 78%;
+  background-repeat: no-repeat;
+  z-index: -1; }
+  .header--short:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4383bb;
+    opacity: 0.85; }
+.header--title {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 28px;
+  text-align: center; }
+  @media screen and (min-width: 960px) {
+    .header--title {
+      font-size: 36px; } }
+  @media screen and (min-width: 1100px) {
+    .header--title {
+      font-size: 48px; } }
+.header--subtitle {
+  position: absolute;
+  top: 61%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px; }
 
 /*# sourceMappingURL=app.css.map */

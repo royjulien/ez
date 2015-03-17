@@ -1,0 +1,59 @@
+/*-------------------------*\
+ * BUTTONS
+/*-------------------------*/
+button,
+.btn
+  display: inline-block
+  padding: 7px 20px
+  border: 2px solid
+  +border-radius(35px)
+  background: none
+  color: $b-80
+  font-size: 18px
+  line-height: 1.5
+  letter-spacing: 0.25px
+  font-weight: 600
+  +transition(color 177ms, border 177ms)
+  cursor: pointer
+
+  &.white
+    border-color: $w-60
+    color: $w-90
+
+    &:hover
+      border-color: $w-80
+      color: $w
+
+    &--borderless
+      border: none
+      color: $w-90
+
+    &--fill
+      border: none
+      background-color: $w
+      color: $b-80
+
+  /*-------------------------*\
+   * BUTTON ICON
+  /*-------------------------*/
+  i
+    font-size: 17px
+
+    &.left
+      margin-left: -5px
+      margin-right: 5px
+
+    &.right
+      margin-left: 5px
+      margin-right: -5px
+
+    // TODO: [JR] Redo all icons as they have a ratio of 1.36 which screws everything up :'(
+    &.w-icon-hamburger
+      position: relative
+      top: 1px
+
+    &.w-icon-caret-down
+      position: relative
+      top: 4px
+      font-size: 24px
+      line-height: .9

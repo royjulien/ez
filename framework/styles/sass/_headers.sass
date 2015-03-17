@@ -1,0 +1,14 @@
+.header
+  &--tall
+    +bg-cover(100%, $header-tall, center, 78%) // TODO: [JR] change 78% (For PSD pixel perfect only, not for production) to center
+    +bg-fade($blue, 0.85)
+
+  &--short
+    +bg-cover(100%, $header-short, center, 78%)
+    +bg-fade($blue, 0.85)
+
+  &--title
+    +bg-title(50%, $w-90)
+
+  &--subtitle
+    +bg-subtitle(61%, $w-60)

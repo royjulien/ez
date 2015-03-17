@@ -1,0 +1,23 @@
+$icons-prefix: "w-icon-"
+
+[class^="w-icon-"]
+  &:before
+    display: inline-block
+    font-family: "wicons"
+    font-style: normal
+    font-weight: 400
+    font-variant: normal
+    speak: none
+    text-decoration: inherit
+    text-transform: none
+    text-rendering: optimizeLegibility
+    +font-smooth
+
+$icons: add \f1a2, address \f139, admin-support \f1d7, admin \f1ae, align-center \f17a, align-left \f179, align-right \f17b, android \f1db, apple \f1b6, arrow-down \f1c5, arrow-left \f1c2, arrow-right-thin \f1dc, arrow-right \f1c3, arrow-up \f1c4, audio \f100, bank \f1dd, blog-archive \f15a, blog-author \f159, blog-categories \f15c, blog-comment \f187, blog-feed \f15b, blog-settings-icon \f1d9, box \f199, branded \f1a6, browser-window \f192, bug \f169, button \f102, calendar \f101, caret-down \f153, caret-up \f154, categories \f195, category-basic \f13c, category-media \f13d, category-more \f140, category-revenue \f13e, category-structure \f166, chart \f1de, check-mark-light \f1cc, check-mark \f19a, checkbox \f12f, checkmark-circle \f1a9, chevron-down-light \f19e, chevron-down \f174, chevron-left-light \f19c, chevron-left \f177, chevron-right-light \f19b, chevron-right \f176, chevron-up-light \f19d, chevron-up \f175, circle-checked \f1d0, circle-unchecked \f1d1, cloud-li \f1df, cog \f164, columns \f103, comment \f161, comments \f104, compare \f16d, computer \f121, copy \f162, copyright \f18e, coupons \f1af, credit-card \f197, customer-comment \f173, customer-eye \f172, customers \f171, dashboard \f198, decrease \f147, delete \f163, discount-tag \f1e0, divider \f105, document \f106, dollar-circle \f1a7, domain-solid \f18a, domains \f16c, double-loop \f1a1, download-li \f1e1, download \f15d, dropdown \f130, edit-flipped \f15e, edit-li \f1cb, edit \f13f, elements-li \f1c7, ellipsis \f1e2, email-box \f131, email \f107, embedded-document \f15f, enlarge \f122, exit \f123, external-link-support \f1d2, external \f184, facebook \f1b8, file-document \f126, file-flashsvg \f127, flag-li \f1e3, flag \f18d, flash \f108, flickr-badge \f158, follow \f109, form \f10a, forum \f10b, gallery \f10c, google-plus \f1bb, grip-vertical \f19f, grip \f182, group-empty \f1e4, group \f1ce, hamburger \f160, heart \f191, hide \f181, home \f183, html \f10d, image-big \f1b0, image-solid \f188, image \f10e, import-support \f1da, inbox \f1ad, increase \f146, input-textbox \f142, instagram \f1bc, li-blog \f1b4, li-comments \f1e5, li-contactform \f1e6, li-coupons \f1e7, li-drag-drop \f1b2, li-ecommerce \f1b5, li-mobile \f1b3, li-mobilestore \f1e8, li-payment \f1e9, li-play \f1be, li-slideshow \f1ea, li-social \f1eb, li-ssl \f1ec, li-themes \f1b1, li-video \f1ed, li-w \f1bf, li-weebly-logo \f1bd, like \f10f, linkedin-badge \f157, loop \f1a0, magnify-dollar \f129, magnify-light \f1ca, magnify \f1a4, mail-support \f1d3, mail \f13a, map-box \f132, map \f110, mobile-small \f156, mobile \f120, move \f165, no-add \f18c, no-edit \f1cf, no-phone-support \f1d4, number-box \f134, open-table \f138, ordered-list \f14f, orders \f196, packages-li \f1c6, page-blog \f17e, page-link \f17c, page-standard \f17f, page-store \f17d, pallet \f185, paragraph-image \f112, paragraph-title \f141, paragraph \f111, person-box \f133, person-li \f1c9, phone-box-outline \f137, phone-box \f12e, phone-support \f1d5, pie-chart \f1a8, placeholder \f113, planner-solid \f186, planner \f167, play \f1b7, player \f189, plugins-li \f1ee, plus \f193, polls \f114, press \f190, print \f1ac, product-block \f155, product-large \f12c, product-regular \f12b, product-small \f12a, product \f194, question-solid \f1c0, question \f13b, quote \f115, radio-btn \f135, redo \f152, refresh \f1ef, refund \f1d6, remove-person \f178, return \f1a3, revert \f16e, right-chevron-circle \f1aa, rss-feed \f116, rsvp \f117, sad-face \f18f, scribed-object \f128, search \f125, secure \f180, settings-li \f1c8, share-link \f118, shopping-cart \f1ab, site-list \f16a, slideshow \f119, social-network \f11a, spacer \f1c1, star \f124, stats \f16b, storefront \f1a5, support \f168, survey \f11b, text-align-center \f14b, text-align-justified \f14d, text-align-left \f14a, text-align-right \f14c, text-bold \f143, text-box \f12d, text-color \f148, text-italic \f144, text-link \f149, text-remove-format \f150, text-underline \f145, title \f11c, trash-support \f1d8, trash \f16f, twitter-feed \f11d, twitter \f1b9, undo \f151, unordered-list \f14e, upload-cloud \f136, upload \f170, upswing \f18b, user \f1cd, video \f11e, youtube-logo \f1f0, youtube \f11f
+
+@function unicode($str)
+  @return unquote("\"") + $str + unquote("\"")
+
+@each $name, $value in $icons
+  .#{$icons-prefix}#{$name}:before
+    content: unicode($value)

@@ -1,0 +1,115 @@
+/*-------------------------*\
+ * MEDIA QUERIES
+/*-------------------------*/
+// Acceptable values
+// 480px  : mobile
+// 640px  : tablet small
+// 768px  : tablet
+// 960px  : tablet medium
+// 1024px : tablet large
+// 1100px : desktop
+// 1280px : desktop large
+
+=min-width($min)
+  @media screen and (min-width: $min)
+    @content
+
+=max-width($max)
+  @media screen and (max-width: $max)
+    @content
+
+=screen($min, $max)
+  @media screen and (min-width: $min) and (max-width: $max)
+    @content
+
+=landscape
+  @media only screen and (orientation: landscape)
+    @content
+
+=portrait
+  @media only screen and (orientation: portrait)
+    @content
+
+=retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    @content
+
+/*-------------------------*\
+ * CLEARFIX
+/*-------------------------*/
+=clearfix
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+/*-------------------------*\
+ * BACKGROUND-COVER
+/*-------------------------*/
+=bg-cover($w: 100%, $h: 100%, $bg-xpos: center, $bg-ypos: center)
+  position: absolute
+  top: 0
+  left: 0
+  width: $w
+  min-height: 350px
+  height: $h
+  background-size: 100%
+  background-size: cover
+  background-position: $bg-xpos $bg-ypos
+  background-repeat: no-repeat
+  z-index: -1
+
+=bg-fade($color: null, $opacity: null)
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $color
+    opacity: $opacity
+
+=bg-title($top: 50%, $color: null)
+  position: absolute
+  top: $top
+  width: 100%
+  +translateY(-50%)
+  color: $color
+  font-size: 28px
+  text-align: center
+
+  +min-width(960px)
+    font-size: 36px
+
+  +min-width(1100px)
+    font-size: 48px
+
+=bg-subtitle($top: 60%, $color: null)
+  position: absolute
+  top: $top
+  width: 100%
+  +translateY(-50%)
+  color: $color
+  font-size: 18px
+  text-align: center
+  letter-spacing: 1px
+
+/*-------------------------*\
+ * W ICONS
+/*-------------------------*/
+=w-icon($icon)
+  &:before
+    content: $icon
+    display: inline-block
+    font-family: "wicons"
+    font-style: normal
+    font-weight: 400
+    font-variant: normal
+    speak: none
+    text-decoration: inherit
+    text-transform: none
+    text-rendering: optimizeLegibility
+    +font-smooth

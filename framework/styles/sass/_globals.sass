@@ -1,0 +1,33 @@
+.divider
+  height: 1px
+  margin: 0
+  border: none
+  background-color: $w-20
+  pointer-events: none
+
+.left
+  float: left
+
+.right
+  float: right
+
+.logo--center
+  position: absolute
+  left: 50%
+  +translateX(-50%)
+  pointer-events: none
+
+  .icon
+    +w-icon("\f1bf")
+    display: inline-block
+    height: 35px
+    color: $w
+    font-size: 35px
+    line-height: 1
+
+    +min-width(960px)
+      +w-icon("\f1bd")
+      height: 50px
+      color: $w
+      font-size: 120px
+      line-height: 0.4

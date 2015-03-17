@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta http-equiv='content-type' content='text/html; charset=UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta name='description' content='Weebly makes it surprisingly easy to create a high-quality website, blog or online store. Over 25 million people use Weebly to bring their unique ideas to life.' />
 
   <!-- OpenGraph protocols -->
@@ -22,24 +23,32 @@
 </head>
 <body>
   <main class='container'>
-    <header class='cover'>
-      <figure class='bg fade' style='background-image:url(img/bg.jpg)'>
-        <figcaption>
-          <h1 class='cover__title'>Style Framework</h1>
-          <h2 class='cover__subtitle'>2015</h2>
-        </figcaption>
-      </figure>
-      <nav class='left'>
-        <i class='w-icon-hamburger'></i>Menu
+    <header class='main-header'>
+      <nav class='main-header__menu'>
+        <button class='white--borderless'><i class='w-icon-hamburger left'></i> Menu</button>
       </nav>
-      <figure class='logo'>
-        <i class='w-icon-li-weebly-logo'></i>
+      <figure class='logo--center'>
+        <i class='icon'></i>
       </figure>
-      <nav class='right'>
-        <button class='white'>Log in</button>
+      <nav class='main-header__menu--user'>
+        <button class='white--borderless'>Log in</button>
         <button class='white'>Sign up</button>
       </nav>
+
+      <figure class='header--tall' style='background-image:url(img/bg.jpg)'>
+        <h2 class='header--title'>Style Framework</h2>
+        <h3 class='header--subtitle'>2015</h3>
+      </figure>
     </header>
+    <hr class='divider'>
+
+    <section class='content'>
+      <ul class='tabs'>
+        <li class='tab'></li>
+        <li class='tab'></li>
+        <li class='tab'></li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>
