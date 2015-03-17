@@ -1131,20 +1131,46 @@ textarea {
     @media screen and (min-width: 960px) {
       .menu--user button:last-child {
         display: inline-block; } }
+.menu--sidebar {
+  width: 100%; }
+
+.item {
+  margin-bottom: 20px;
+  list-style-type: none; }
+  .item--sub {
+    margin: 10px;
+    list-style-type: none; }
 
 .link--tab {
   display: block;
   height: 53px;
-  padding: 0 20px;
+  padding: 0 5px;
   color: rgba(0, 0, 0, 0.45);
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase; }
+  @media screen and (min-width: 960px) {
+    .link--tab {
+      padding: 0 20px;
+      font-size: 16px; } }
   .link--tab:hover {
     color: rgba(0, 0, 0, 0.7); }
   .link--tab.active {
     color: #2990ea;
     border-bottom: 2px solid; }
+.link--header {
+  display: block;
+  padding: 7px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase; }
+.link--sub {
+  padding: 7px 14px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 16px;
+  font-weight: 600; }
+  .link--sub:hover, .link--sub.active {
+    color: #2990ea; }
 
 /*-------------------------*\
  * TABS */
@@ -1156,8 +1182,37 @@ textarea {
   line-height: 57px;
   text-align: center; }
   .tabs .tab {
-    display: inline-block;
     list-style: none; }
+    @media screen and (max-width: 959px) {
+      .tabs .tab:first-child:nth-last-child(1), .tabs .tab:first-child:nth-last-child(1) ~ .tab {
+        float: left;
+        width: 100%; }
+      .tabs .tab:first-child:nth-last-child(2), .tabs .tab:first-child:nth-last-child(2) ~ .tab {
+        float: left;
+        width: 50%; }
+      .tabs .tab:first-child:nth-last-child(3), .tabs .tab:first-child:nth-last-child(3) ~ .tab {
+        float: left;
+        width: 33.33333%; }
+      .tabs .tab:first-child:nth-last-child(4), .tabs .tab:first-child:nth-last-child(4) ~ .tab {
+        float: left;
+        width: 25%; }
+      .tabs .tab:first-child:nth-last-child(5), .tabs .tab:first-child:nth-last-child(5) ~ .tab {
+        float: left;
+        width: 20%; }
+      .tabs .tab:first-child:nth-last-child(6), .tabs .tab:first-child:nth-last-child(6) ~ .tab {
+        float: left;
+        width: 16.66667%; }
+      .tabs .tab:first-child:nth-last-child(7), .tabs .tab:first-child:nth-last-child(7) ~ .tab {
+        float: left;
+        width: 14.28571%; }
+      .tabs .tab:first-child:nth-last-child(8), .tabs .tab:first-child:nth-last-child(8) ~ .tab {
+        float: left;
+        width: 12.5%; } }
+    @media screen and (min-width: 960px) {
+      .tabs .tab {
+        display: inline-block;
+        width: auto;
+        float: none; } }
 
 /*-------------------------*\
  * BUTTONS */
@@ -1267,6 +1322,14 @@ button,
   @media screen and (min-width: 1320px) {
     .content {
       padding: 20px 0; } }
+
+.sidebar {
+  display: none; }
+  @media screen and (min-width: 960px) {
+    .sidebar {
+      display: block;
+      width: 20%;
+      padding: 20px; } }
 
 .header--tall {
   position: relative;
