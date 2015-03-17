@@ -1,54 +1,82 @@
 <!doctype html>
 <html>
 <head>
-  <meta http-equiv='content-type' content='text/html; charset=UTF-8' />
+  <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <meta name='description' content='Weebly makes it surprisingly easy to create a high-quality website, blog or online store. Over 25 million people use Weebly to bring their unique ideas to life.' />
 
-  <!-- OpenGraph protocols -->
-  <meta property='og:title' content='Weebly is the easiest way to create a website, store or blog'/>
-  <meta property='og:type' content='company'/>
-  <meta property='og:site_name' content='Weebly.com'/>
-  <meta property='og:image' content='http://cdn1.editmysite.com/images/theme_contest/screenshots.gif'/>
+  <!-- opengraph protocols -->
+  <meta property='og:title' content='Weebly is the easiest way to create a website, store or blog'>
+  <meta property='og:type' content='company'>
+  <meta property='og:site_name' content='Weebly.com'>
+  <meta property='og:image' content='http://cdn1.editmysite.com/images/theme_contest/screenshots.gif'>
 
   <title>Ez Framework</title>
-  <!-- Google Fonts -->
+  <meta name='description' content='Weebly makes it surprisingly easy to create a high-quality website, blog or online store. Over 25 million people use Weebly to bring their unique ideas to life.'>
+
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700'>
-  
-  <!-- Gobal App CSS -->
   <link rel='stylesheet' href='styles/css/app.css'>
 
-  <!-- Modernizr -->
+  <!-- modernizr -->
   <script src='https://cdn2.editmysite.com/js/vendor/modernizr.js'></script>
 </head>
-<body>
-  <main class='container'>
-    <header class='main-header'>
-      <nav class='main-header__menu'>
-        <button class='white--borderless'><i class='w-icon-hamburger left'></i> Menu</button>
-      </nav>
-      <figure class='logo--center'>
-        <i class='icon'></i>
-      </figure>
-      <nav class='main-header__menu--user'>
-        <button class='white--borderless'>Log in</button>
-        <button class='white'>Sign up</button>
-      </nav>
+<body class='ez'>
+  <header class='main-header'>
+    <nav class='menu--global'>
+      <button class='white--borderless'><i class='w-icon-hamburger left'></i> Menu</button>
+    </nav>
+    <figure class='logo--center'>
+      <i class='icon'></i>
+    </figure>
+    <nav class='menu--user'>
+      <button class='white--borderless'>Log in</button>
+      <button class='white'>Sign up</button>
+    </nav>
+  </header>
 
-      <figure class='header--tall' style='background-image:url(img/bg.jpg)'>
-        <h2 class='header--title'>Style Framework</h2>
-        <h3 class='header--subtitle'>2015</h3>
-      </figure>
-    </header>
-    <hr class='divider'>
+  <figure class='header--tall'>
+    <figure class='header--tall--bg' style='background-image:url(img/bg.jpg)'></figure>
+    <h2 class='header--title'>Style Framework</h2>
+    <h3 class='header--subtitle'>2015</h3>
+  </figure>
 
-    <section class='content'>
-      <ul class='tabs'>
-        <li class='tab'></li>
-        <li class='tab'></li>
-        <li class='tab'></li>
+  <ul class='tabs'>
+    <li class='tab'><a href='#designelements' class='link--tab active' title='Design Elements'>Design Elements</a></li>
+    <li class='tab'><a href='#uicomponents' class='link--tab' title='UI Components'>UI Components</a></li>
+    <li class='tab'><a href='#designguidelines' class='link--tab' title='Design Guidelines'>Design Guidelines</a></li>
+  </ul>
+
+  <section class='content'>
+    <aside class='sidebar'>
+      <ul class='menu--sidebar'>
+        <li class='item'>
+          <a href='#colors' class='link--header' title='Colors'>Colors</a>
+          <ul class='menu--sidebar--sub'>
+            <li class='item'><a href='#palettes' class='link--sub' title='Palettes'>Palettes</a></li>
+            <li class='item'><a href='#uicolors' class='link--sub' title='UI Colors'>UI Colors</a></li>
+          </ul>
+        </li>
+
+        <li class='item'>
+          <a href='#colors' class='link--header' title='Typography'>Typography</a>
+          <ul class='menu--sidebar--sub'>
+            <li class='item'><a href='#heading' class='link--sub' title='Heading'>Heading</a></li>
+            <li class='item'><a href='#other' class='link--sub' title='Other'>Other</a></li>
+          </ul>
+        </li>
+
+        <li class='item'>
+          <a href='#colors' class='link--header' title='Iconography'>Iconography</a>
+          <ul class='menu--sidebar--sub'>
+            <li class='item'><a href='#elements' class='link--sub' title='Elements'>Elements</a></li>
+            <li class='item'><a href='#featured' class='link--sub' title='Featured'>Featured</a></li>
+            <li class='item'><a href='#interface' class='link--sub' title='Interface'>Interface</a></li>
+          </ul>
+        </li>
       </ul>
-    </section>
-  </main>
+    </aside>
+  </section>
+
+  <!-- js -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
 </body>
 </html>

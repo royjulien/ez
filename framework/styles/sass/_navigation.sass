@@ -1,0 +1,33 @@
+.menu
+  &--global
+    float: left
+
+    .white--borderless
+      padding: 7px 3px
+
+  &--user
+    float: right
+
+    button
+      &:last-child
+        display: none
+
+        +min-width(960px)
+          display: inline-block
+
+.link
+  &--tab
+    display: block
+    height: $tab-height - $tab-modifier
+    padding: 0 20px
+    color: $b-45
+    font-size: 16px
+    font-weight: 600
+    text-transform: uppercase
+
+    &:hover
+      color: $b-70
+
+    &.active
+      color: $blue--link
+      border-bottom: $tab-modifier solid

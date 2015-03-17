@@ -1,5 +1,7 @@
 html,
 body
+  min-height: 100%
+  height: 100%
   padding: 0
   margin: 0
 
@@ -28,6 +30,45 @@ input,
 textarea,
 button
   +box-sizing
+
+a
+  background-color: transparent
+  text-decoration: none
+  color: $b-70
+  +transition(color 177ms)
+
+ul
+  margin: 0
+  padding: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  padding: 0
+  margin: 0
+  font-weight: 400
+
+  +retina
+    font-weight: 300
+
+b,
+strong
+  font-weight: bold
+
+em
+  font-style: italic
+
+i
+  line-height: 1.35
+
+code,
+kbd,
+pre,
+samp
+  font-family: monospace
 
 figure
   margin: 0

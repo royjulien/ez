@@ -1,27 +1,14 @@
 .container
-  max-width: 1280px
-  padding: 0 20px
-  margin: auto
-  overflow: hidden
+  +container
 
 .main-header
-  clear: both
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  +container
   height: 85px
-  padding: 22px 0
-  overflow: hidden
+  border-bottom: 1px solid $w-20
 
-  &__menu
-    float: left
-
-    .white--borderless
-      padding: 7px 3px
-
-  &__menu--user
-    float: right
-
-    button
-      &:last-child
-        display: none
-
-        +min-width(768px)
-          display: inline-block
+.content
+  +container($global-width, 20px)

@@ -1,25 +1,42 @@
 /*-------------------------*\
+ * BROWSER SPECIFIC
+/*-------------------------*/
+=webkit
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+    @content
+
+=moz
+  @-moz-document url-prefix()
+    @content
+
+/*-------------------------*\
  * BOX-MODEL
 /*-------------------------*/
 =box-sizing($boxmodel: border-box)
-  -webkit-box-sizing: $boxmodel
-  -moz-box-sizing: $boxmodel
+  +webkit
+    -webkit-box-sizing: $boxmodel
+  +moz
+    -moz-box-sizing: $boxmodel
   box-sizing: $boxmodel
 
 /*-------------------------*\
  * VISIBILITY
 /*-------------------------*/
 =backface-visibility($visibility)
-  -webkit-backface-visibility: $visibility
-  -moz-backface-visibility: $visibility
+  +webkit
+    -webkit-backface-visibility: $visibility
+  +moz
+    -moz-backface-visibility: $visibility
   backface-visibility: $visibility
 
 /*-------------------------*\
  * USER-SELECT
 /*-------------------------*/
 =user-select($select)
-  -webkit-user-select: $select
-  -moz-user-select: $select
+  +webkit
+    -webkit-user-select: $select
+  +moz
+    -moz-user-select: $select
   -ms-user-select: $select
   -o-user-select: $select
   user-select: $select
@@ -28,8 +45,10 @@
  * TYPOGRAPHY
 /*-------------------------*/
 =font-smooth
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+  +webkit
+    -webkit-font-smoothing: antialiased
+  +moz
+    -moz-osx-font-smoothing: grayscale
   text-rendering: optimizeLegibility
 
 =text-overflow
@@ -39,8 +58,10 @@
 
 =hyphens($mode: auto)
   word-wrap: break-word
-  -webkit-hyphens: $mode
-  -moz-hyphens: $mode
+  +webkit
+    -webkit-hyphens: $mode
+  +moz
+    -moz-hyphens: $mode
   -ms-hyphens: $mode
   -o-hyphens: $mode
   hyphens: $mode
@@ -54,13 +75,15 @@
   word-wrap: break-word
 
 =placeholder($color)
-  &::-webkit-input-placeholder
-    color: $color
-  &::-moz-placeholder
-    color: $color
-    opacity: 1
-  &:-moz-placeholder
-    color: $color
+  +webkit
+    &::-webkit-input-placeholder
+      color: $color
+  +moz
+    &::-moz-placeholder
+      color: $color
+      opacity: 1
+    &:-moz-placeholder
+      color: $color
   &:-ms-input-placeholder
     color: $color
 
@@ -68,24 +91,30 @@
  * BORDER-RADIUS
 /*-------------------------*/
 =border-radius($radius: 2px)
-  -webkit-border-radius: $radius
-  -moz-border-radius: $radius
+  +webkit
+    -webkit-border-radius: $radius
+  +moz
+    -moz-border-radius: $radius
   border-radius: $radius
 
 /*-------------------------*\
  * BOX-SHADOW
 /*-------------------------*/
 =box-shadow($shadow)
-  -webkit-box-shadow: $shadow
-  -moz-box-shadow: $shadow
+  +webkit
+    -webkit-box-shadow: $shadow
+  +moz
+    -moz-box-shadow: $shadow
   box-shadow: $shadow
 
 /*-------------------------*\
  * FILTERS
 /*-------------------------*/
 =filter($filter-type, $filter-amount)
-  -webkit-filter: $filter-type + unquote("(#{$filter-amount})")
-  -moz-filter: $filter-type + unquote("(#{$filter-amount})")
+  +webkit
+    -webkit-filter: $filter-type + unquote("(#{$filter-amount})")
+  +moz
+    -moz-filter: $filter-type + unquote("(#{$filter-amount})")
   -ms-filter: $filter-type + unquote("(#{$filter-amount})")
   -o-filter: $filter-type + unquote("(#{$filter-amount})")
   filter: $filter-type + unquote("(#{$filter-amount})")
@@ -100,15 +129,19 @@
  * TRANSFORMERS ;)
 /*-------------------------*/
 =transform($content)
-  -webkit-transform: $content
-  -moz-transform: $content
+  +webkit
+    -webkit-transform: $content
+  +moz
+    -moz-transform: $content
   -ms-transform: $content
   -o-transform: $content
   transform: $content
 
 =transform-origin($origin)
-  -webkit-transform-origin: $origin
-  -moz-transform-origin: $origin
+  +webkit
+    -webkit-transform-origin: $origin
+  +moz
+    -moz-transform-origin: $origin
   -ms-transform-origin: $origin
   transform-origin: $origin
 
@@ -156,26 +189,34 @@
  * TRANSITIONS
 /*-------------------------*/
 =transition($transitions...)
-  -webkit-transition: $transitions
-  -moz-transition: $transitions
+  +webkit
+    -webkit-transition: $transitions
+  +moz
+    -moz-transition: $transitions
   -o-transition: $transitions
   transition: $transitions
 
 =transition-property($transition-property)
-  -webkit-transition-property: $transition-property
-  -moz-transition-property: $transition-property
+  +webkit
+    -webkit-transition-property: $transition-property
+  +moz
+    -moz-transition-property: $transition-property
   -o-transition-property: $transition-property
   transition-property: $transition-property
 
 =transition-delay($transition-delay)
-  -webkit-transition-delay: $transition-delay
-  -ms-transition-delay: $transition-delay
+  +webkit
+    -webkit-transition-delay: $transition-delay
+  +moz
+    -ms-transition-delay: $transition-delay
   -o-transition-delay: $transition-delay
   transition-delay: $transition-delay
 
 =transition-duration($transition-duration)
-  -webkit-transition-duration: $transition-duration
-  -moz-transition-duration: $transition-duration
+  +webkit
+    -webkit-transition-duration: $transition-duration
+  +moz
+    -moz-transition-duration: $transition-duration
   -o-transition-duration: $transition-duration
   transition-duration: $transition-duration
 
@@ -183,57 +224,75 @@
  * PERSPECTIVES
 /*-------------------------*/
 =perspective($perspective)
-  -webkit-perspective: $perspective
-  -moz-perspective: $perspective
+  +webkit
+    -webkit-perspective: $perspective
+  +moz
+    -moz-perspective: $perspective
   perspective: $perspective
 
 =perspective-origin($perspective)
-  -webkit-perspective-origin: $perspective
-  -moz-perspective-origin: $perspective
+  +webkit
+    -webkit-perspective-origin: $perspective
+  +moz
+    -moz-perspective-origin: $perspective
   perspective-origin: $perspective
 
 /*-------------------------*\
  * ANIMATIONS
 /*-------------------------*/
 =animation($animation)
-  -webkit-animation: $animation
-  -moz-animation: $animation
+  +webkit
+    -webkit-animation: $animation
+  +moz
+    -moz-animation: $animation
   -o-animation: $animation
   animation: $animation
 
 =animation-name($name)
-  -webkit-animation-name: $name
-  -moz-animation-name: $name
+  +webkit
+    -webkit-animation-name: $name
+  +moz
+    -moz-animation-name: $name
   -o-animation-name: $name
   animation-name: $name
 
 =animation-duration($duration)
-  -webkit-animation-duration: $duration
-  -moz-animation-duration: $duration
+  +webkit
+    -webkit-animation-duration: $duration
+  +moz
+    -moz-animation-duration: $duration
   -o-animation-duration: $duration
   animation-duration: $duration
 
 =animation-timing-function($timing-function)
-  -webkit-animation-timing-function: $timing-function
-  -moz-animation-timing-function: $timing-function
+  +webkit
+    -webkit-animation-timing-function: $timing-function
+  +moz
+    -moz-animation-timing-function: $timing-function
   -o-animation-timing-function: $timing-function
   animation-timing-function: $timing-function
 
 =animation-delay($delay)
-  -webkit-animation-delay: $delay
-  -moz-animation-delay: $delay
+  +webkit
+    -webkit-animation-delay: $delay
+  +moz
+    -moz-animation-delay: $delay
   -o-animation-delay: $delay
   animation-delay: $delay
 
 =animation-iteration-count($iteration-count)
-  -webkit-animation-iteration-count: $iteration-count
-  -moz-animation-iteration-count: $iteration-count
+  +webkit
+    -webkit-animation-iteration-count: $iteration-count
+  +moz
+    -moz-animation-iteration-count: $iteration-count
   -o-animation-iteration-count: $iteration-count
   animation-iteration-count: $iteration-count
 
 =animation-direction($direction)
-  -webkit-animation-direction: $direction
-  -moz-animation-direction: $direction
+  +webkit
+    -webkit-animation-direction: $direction
+  +moz
+    -moz-animation-direction: $direction
   -o-animation-direction: $direction
   animation-direction: $direction
 
@@ -241,11 +300,12 @@
  * KEYFRAMES
 /*-------------------------*/
 =keyframes($animationName)
-  @-webkit-keyframes #{$animationName}
-    @content
-
-  @-moz-keyframes #{$animationName}
-    @content
+  +webkit
+    @-webkit-keyframes #{$animationName}
+      @content
+  +moz
+    @-moz-keyframes #{$animationName}
+      @content
 
   @-o-keyframes #{$animationName}
     @content
