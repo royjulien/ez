@@ -1,22 +1,26 @@
 .container
-  +container
-
-.main-header
-  position: absolute
-  top: 0
-  right: 0
-  left: 0
-  +container
-  height: 85px
-  border-bottom: 1px solid $w-20
-
-.content
   +container($global-width, 20px)
 
 .sidebar
   display: none
   
   +min-width(960px)
+    float: left
     display: block
     width: 20%
+    padding: 0 20px
+
+.content
+  width: 100%
+  border: 1px solid $b-20
+  background-color: $w
+
+  +min-width(960px)
+    float: left
+    width: 80%
+
+  .body
     padding: 20px
+
+    +min-width(960px)
+      padding: 40px

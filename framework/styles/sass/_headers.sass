@@ -1,20 +1,58 @@
 .header
+  /*-------------------------*\
+   * MENU HEADER
+  /*-------------------------*/
+  &--menu
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    +container
+    height: 85px
+    border-bottom: 1px solid $w-20
+
+  /*-------------------------*\
+   * PAGE HEADER LAYOUTS
+  /*-------------------------*/
   &--tall
     +cover($header-tall)
 
-    &--bg
+    .bg
       +bg-cover(center, 78%) // TODO: [JR] change 78% (For PSD pixel perfect only, not for production) to center
       +bg-fade($blue, 0.85)
+
+    .title
+      +bg-title(50%, $w-90)
+
+    .subtitle
+      +bg-subtitle(61%, $w-60)
 
   &--short
     +cover($header-short)
 
-    &--bg
+    .bg
       +bg-cover(center, 78%)
       +bg-fade($blue, 0.85)
 
-  &--title
-    +bg-title(50%, $w-90)
+    .title
+      +bg-title(50%, $w-90, 24px)
 
-  &--subtitle
-    +bg-subtitle(61%, $w-60)
+    .subtitle
+      +bg-subtitle(61%, $w-60)
+
+  /*-------------------------*\
+   * CONTENT HEADER
+  /*-------------------------*/
+  &--content
+    padding: 20px
+    border-bottom: 1px solid $b-20
+
+    +min-width(960px)
+      padding: 40px
+
+    .title
+      font-size: 28px
+
+    .subtitle
+      color: $b-60
+      font-size: 16px

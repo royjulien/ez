@@ -53,6 +53,7 @@
   position: relative
   min-height: 300px
   height: $height
+  +transition(height 333ms)
 
 /*-------------------------*\
  * BACKGROUND COVERS
@@ -80,25 +81,28 @@
     background-color: $color
     opacity: $opacity
 
-=bg-title($top: 50%, $color: null)
+=bg-title($top: 50%, $color: null, $font-size: 36px)
   position: absolute
   top: $top
   width: 100%
   +translateY(-50%)
   color: $color
-  font-size: 36px
+  font-size: $font-size
   text-align: center
 
   +min-width(960px)
-    font-size: 48px
+    font-size: $font-size * 1.33
 
-=bg-subtitle($top: 60%, $color: null)
+  +min-width(1280px)
+    font-size: $font-size * 1.5
+
+=bg-subtitle($top: 60%, $color: null, $font-size: 18px)
   position: absolute
   top: $top
   width: 100%
   +translateY(-50%)
   color: $color
-  font-size: 18px
+  font-size: $font-size
   text-align: center
   letter-spacing: 1px
 

@@ -20,7 +20,7 @@
   <script src='https://cdn2.editmysite.com/js/vendor/modernizr.js'></script>
 </head>
 <body class='ez'>
-  <header class='main-header'>
+  <header class='header--menu'>
     <nav class='menu--global'>
       <button class='white--borderless'><i class='w-icon-hamburger left'></i> Menu</button>
     </nav>
@@ -33,11 +33,11 @@
     </nav>
   </header>
 
-  <figure class='header--tall'>
-    <figure class='header--tall--bg' style='background-image:url(img/bg.jpg)'></figure>
-    <h2 class='header--title'>Style Framework</h2>
-    <h3 class='header--subtitle'>2015</h3>
-  </figure>
+  <header class='header--tall'>
+    <figure class='bg' style='background-image:url(img/bg.jpg)'></figure>
+    <h2 class='title'>Style Framework</h2>
+    <h3 class='subtitle'>2015</h3>
+  </header>
 
   <ul class='tabs'>
     <li class='tab'><a href='#designelements' class='link--tab active' title='Design Elements'>Design Elements</a></li>
@@ -45,7 +45,7 @@
     <li class='tab'><a href='#designguidelines' class='link--tab' title='Design Guidelines'>Design Guidelines</a></li>
   </ul>
 
-  <section class='content'>
+  <section class='container'>
     <aside class='sidebar'>
       <ul class='menu--sidebar'>
         <li class='item'>
@@ -74,9 +74,34 @@
         </li>
       </ul>
     </aside>
+
+    <article class='content'>
+      <header class='header--content'>
+        <h2 class='title'>Elements</h2>
+        <h3 class='subtitle'>Marketplace application cards</h3>
+      </header>
+      <div class='body'>
+        <section class='app-cards'>
+          <h3 class='title'>App Cards</h3>
+          <div class='app-card'>
+            <div class='card'>
+              <figure class='thumbnail' style='background-image:url(img/mailchimp.png)'></figure>
+              <h4 class='name'>App Name</h4>
+              <figure class='rating' data-rating='4.5'></figure>
+              <p class='description'>Two line app description at 14px font size.</p>
+              <span class='price'>Free</span>
+            </div>
+            <div class='snippet'>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
   </section>
 
   <!-- js -->
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+  <script src='js/main.js'></script>
 </body>
 </html>
