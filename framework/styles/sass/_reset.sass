@@ -8,6 +8,7 @@ body
 body
   color: $b-80
   font-family: "ProximaNova", "Open Sans", sans-serif
+  font-size: 16px
   line-height: 1.35
   +font-smooth
 
@@ -50,10 +51,6 @@ h5,
 h6
   padding: 0
   margin: 0
-  font-weight: 400
-
-  +retina
-    font-weight: 300
 
 b,
 strong
@@ -62,14 +59,19 @@ strong
 em
   font-style: italic
 
-i
-  line-height: 1.35
-
 code,
 kbd,
 pre,
 samp
   font-family: monospace
+  font-size: 14px
+
+pre
+  margin: 0
+  +pre
+
+code
+  line-height: 1.715
 
 figure
   margin: 0

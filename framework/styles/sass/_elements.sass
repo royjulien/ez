@@ -1,0 +1,79 @@
+.body
+  .title
+    margin-bottom: 20px
+    font-size: 14px
+    font-weight: 600
+    text-transform: uppercase
+
+.app-card
+  padding: 0 5px 40px
+  clear: both
+  overflow: hidden
+
+  .card
+    padding: 20px
+    border: 1px solid $b-20
+    +transition(border 233ms, box-shadow 233ms)
+    cursor: pointer
+
+    +min-width(768px)
+      float: left
+      width: 200px
+
+    &:hover
+      border-color: $blue--light
+      +shadow
+
+    .thumbnail
+      position: relative
+      width: 122px
+      height: 86px
+      margin-bottom: 20px
+
+      .icon
+        +app-card-icon($mailchimp)
+
+    .description
+      margin: 7px 0
+      color: $b-70
+      font-size: 14px
+      font-weight: 600
+
+    .price
+      margin-top: 14px
+      color: $blue--link
+      font-size: 16px
+      font-weight: 600
+      line-height: 1
+
+  .snippet
+    display: none
+
+    // TODO: [JR] needs design as link--actions crash into endpoint
+    +min-width(768px)
+      display: block
+      float: left
+      width: calc(100% - 240px)
+      margin-left: 20px
+      border: 1px solid $b-20
+      overflow: hidden
+
+  &--action
+    @extend .app-card
+    
+    .card
+      cursor: default
+
+      +min-width(768px)
+        width: 340px
+
+      &:hover
+        border-color: $b-20
+        +box-shadow(none)
+    
+    .name
+      font-size: 28px
+
+    button
+      padding: 7px 68px
+      margin: 10px 0

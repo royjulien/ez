@@ -1,0 +1,28 @@
+.rating
+  margin: 7px 0
+  color: $orange--light
+
+  .ez-star
+    &.active
+      color: $orange
+
+  .ez-star--half
+    position: relative
+
+    &:before
+      content: "\e601"
+      color: $orange--light
+
+    &.active
+      &:after
+        position: absolute
+        left: 0
+        color: $orange
+
+  &__count
+    display: inline-block
+    position: relative
+    top: -2px
+    margin-left: 5px
+    color: $b-45
+    font-size: 14px

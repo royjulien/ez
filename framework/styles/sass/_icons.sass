@@ -7,6 +7,7 @@ $icons-prefix: "w-icon-"
     font-style: normal
     font-weight: 400
     font-variant: normal
+    line-height: 1.35
     speak: none
     text-decoration: inherit
     text-transform: none
@@ -21,3 +22,23 @@ $icons: add \f1a2, address \f139, admin-support \f1d7, admin \f1ae, align-center
 @each $name, $value in $icons
   .#{$icons-prefix}#{$name}:before
     content: unicode($value)
+
+
+[class^="ez-"],
+[class*=" ez-"]
+  font-family: 'ez'
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  +font-smooth
+
+.ez-star
+  &:before
+    content: "\e601"
+
+  &--half
+    &:after
+      content: "\e600"

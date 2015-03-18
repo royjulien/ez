@@ -13,7 +13,7 @@ button,
   line-height: 1.5
   letter-spacing: 0.25px
   font-weight: 600
-  +transition(color 177ms, border 177ms)
+  +transition(color 233ms, border 233ms, box-shadow 233ms)
   cursor: pointer
 
   &.white
@@ -32,6 +32,13 @@ button,
       border: none
       background-color: $w
       color: $b-80
+
+  &.blue
+    border-color: $b-20
+    color: $blue--link
+
+    &:hover
+      +shadow
 
   /*-------------------------*\
    * BUTTON ICON

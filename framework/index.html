@@ -33,7 +33,7 @@
     </nav>
   </header>
 
-  <header class='header--tall'>
+  <header class='header--short'>
     <figure class='bg' style='background-image:url(img/bg.jpg)'></figure>
     <h2 class='title'>Style Framework</h2>
     <h3 class='subtitle'>2015</h3>
@@ -80,22 +80,70 @@
         <h2 class='title'>Elements</h2>
         <h3 class='subtitle'>Marketplace application cards</h3>
       </header>
+
       <div class='body'>
-        <section class='app-cards'>
-          <h3 class='title'>App Cards</h3>
-          <div class='app-card'>
-            <div class='card'>
-              <figure class='thumbnail' style='background-image:url(img/mailchimp.png)'></figure>
-              <h4 class='name'>App Name</h4>
-              <figure class='rating' data-rating='4.5'></figure>
-              <p class='description'>Two line app description at 14px font size.</p>
-              <span class='price'>Free</span>
+        <div class='app-card'>
+          <h3 class='title'>App Card</h3>
+          <div class='card'>
+            <div class='thumbnail'>
+              <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
             </div>
-            <div class='snippet'>
-              
-            </div>
+            <h4 class='name'>App Name</h4>
+            <figure class='rating' data-rating='4.5'>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+            </figure>
+            <p class='description'>Two line app description at 14px font size.</p>
+            <h5 class='price'>Free</h5>
           </div>
-        </section>
+          <div class='snippet'>
+            <header class='header--snippet'>
+              = ui_component('cards/card', properties: <strong>{as_below}</strong>)
+              <span class='right'>
+                <a href='#psd' class='link--snippet' title='Download PSD file'>Psd</a>
+                <a href='#copy' class='link--snippet' title=''>Copy</a>
+              </span>
+            </header>
+<pre>
+<code>
+  <span class='punctuation'>{</span>
+    url<span class='punctuation'>:</span> <span class='string'>"#"</span><span class='punctuation'>,</span>
+    name<span class='punctuation'>:</span> <span class='string'>"App Name"</span><span class='punctuation'>,</span>
+    description<span class='punctuation'>:</span> <span class='string'>"Two line app description at 14px font size."</span><span class='punctuation'>,</span>
+    app_image_alt<span class='punctuation'>:</span> <span class='string'>""</span><span class='punctuation'>,</span>
+    fixed?<span class='punctuation'>:</span> <span class='boolean--false'>false</span>
+  <span class='punctuation'>}</span>
+</code>
+</pre>
+          </div>
+        </div>
+
+        <div class='app-card--action'>
+          <h3 class='title'>App Action Card</h3>
+          <div class='card'>
+            <div class='thumbnail'>
+              <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
+            </div>
+            <h4 class='name'>App Name</h4>
+            <figure class='rating' data-rating='4'>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <i class='ez-star'></i>
+              <figcaption class='rating__count'>(132)</figcaption>
+            </figure>
+            <button class='blue'>Add</button>
+            <ul>
+              <li>$19/mo</li>
+              <li>14 day free trial</li>
+              <li>appwebsite.com</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </article>
   </section>

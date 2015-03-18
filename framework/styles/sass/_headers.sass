@@ -10,6 +10,7 @@
     +container
     height: 85px
     border-bottom: 1px solid $w-20
+    z-index: 1
 
   /*-------------------------*\
    * PAGE HEADER LAYOUTS
@@ -35,7 +36,7 @@
       +bg-fade($blue, 0.85)
 
     .title
-      +bg-title(50%, $w-90, 24px)
+      +bg-title(50%, $w-90)
 
     .subtitle
       +bg-subtitle(61%, $w-60)
@@ -56,3 +57,20 @@
     .subtitle
       color: $b-60
       font-size: 16px
+
+  /*-------------------------*\
+   * SNIPPET HEADER
+  /*-------------------------*/
+  &--snippet
+    height: 55px
+    line-height: 55px
+    padding-left: 20px
+    padding-right: 13px
+
+    &:after
+      content: ''
+      float: left
+      width: 150%
+      height: 1px
+      background-color: $b-20
+
