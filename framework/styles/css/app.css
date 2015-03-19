@@ -1101,7 +1101,7 @@ textarea {
     position: relative;
     top: -2px;
     margin-left: 5px;
-    color: rgba(0, 0, 0, 0.45);
+    color: #9ba0a3;
     font-size: 14px; }
 
 /*-------------------------*\
@@ -1227,7 +1227,7 @@ textarea {
     position: relative;
     height: 53px;
     padding: 0 5px;
-    color: rgba(0, 0, 0, 0.45);
+    color: #9ba0a3;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase; }
@@ -1247,7 +1247,7 @@ textarea {
     text-transform: uppercase; }
   .link--sub {
     padding: 7px 14px;
-    color: rgba(0, 0, 0, 0.45);
+    color: #9ba0a3;
     font-size: 16px;
     font-weight: 600; }
     .link--sub:hover, .link--sub.active {
@@ -1331,8 +1331,8 @@ button,
   line-height: 1.5;
   letter-spacing: 0.25px;
   font-weight: 600;
-  -o-transition: color 233ms, border 233ms, box-shadow 233ms;
-  transition: color 233ms, border 233ms, box-shadow 233ms;
+  -o-transition: color 233ms, border 233ms;
+  transition: color 233ms, border 233ms;
   cursor: pointer;
   /*-------------------------*\
    * BUTTON ICON */
@@ -1348,11 +1348,11 @@ button,
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     button,
     .btn {
-      -webkit-transition: color 233ms, border 233ms, box-shadow 233ms; } }
+      -webkit-transition: color 233ms, border 233ms; } }
 @-moz-document url-prefix() {
   button,
   .btn {
-    -moz-transition: color 233ms, border 233ms, box-shadow 233ms; } }
+    -moz-transition: color 233ms, border 233ms; } }
   button.white,
   .btn.white {
     border-color: rgba(255, 255, 255, 0.4);
@@ -1414,6 +1414,24 @@ button,
     .btn.blue--borderless {
       border: none;
       color: #2990ea; }
+  button.modal__button,
+  .btn.modal__button {
+    width: 100%;
+    padding: 8px 0 7px;
+    border-radius: 0;
+    border-top: 1px solid #d4d5d6;
+    border-right: none;
+    border-bottom: 1px solid #d4d5d6;
+    border-left: none;
+    background-color: white; }
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      button.modal__button,
+      .btn.modal__button {
+        -webkit-border-radius: 0; } }
+@-moz-document url-prefix() {
+  button.modal__button,
+  .btn.modal__button {
+    -moz-border-radius: 0; } }
   button i,
   .btn i {
     font-size: 17px; }
@@ -1897,12 +1915,47 @@ button,
   .modal__header button {
     padding: 14px 20px; }
 .modal__content {
-  padding-top: 35px;
+  padding-top: 20px;
   height: calc(100% - 55px);
   overflow-x: hidden;
   overflow-y: scroll; }
   .modal__content .title {
+    margin: 15px 0 7px;
     font-size: 18px;
-    font-weight: 600; }
+    font-weight: 600;
+    text-align: center; }
+  .modal__content .subtitle {
+    margin: 7px 0;
+    font-size: 18px;
+    text-align: center; }
+.modal__form {
+  margin-top: 20px; }
+.modal__label {
+  padding: 0 40px;
+  font-weight: 600; }
+.modal__input {
+  width: 100%;
+  height: 45px;
+  padding: 0 20px 0 40px;
+  margin-bottom: 20px;
+  border-top: 1px solid #d4d5d6;
+  border-right: none;
+  border-bottom: 1px solid #d4d5d6;
+  border-left: none;
+  line-height: 46px;
+  -o-transition: border 233ms;
+  transition: border 233ms; }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .modal__input {
+      -webkit-transition: border 233ms; } }
+@-moz-document url-prefix() {
+  .modal__input {
+    -moz-transition: border 233ms; } }
+  .modal__input:active, .modal__input:focus {
+    border-color: #7ac1ff; }
+  .modal__input.valid {
+    border-color: #3da83e; }
+  .modal__input.invalid {
+    border-color: #e13a3a; }
 
 /*# sourceMappingURL=app.css.map */

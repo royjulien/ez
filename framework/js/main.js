@@ -5,6 +5,7 @@ $(function () {
   tabSwitch('link--tab')
   ratings('rating')
   openModal('openModal')
+  checkDummyForm('modal__input')
 })
 
 var tabSwitch = function (className) {
@@ -61,9 +62,9 @@ var tabSwitch = function (className) {
     $('.container').fadeOut(177)
     $('[data-page-name=' + linkName + ']').fadeIn(177)
   })
-};
+},
 
-var ratings = function (className) {
+ratings = function (className) {
   $('.' + className).each(function () {
     var rating = $(this).data('rating');
 
@@ -85,15 +86,22 @@ var ratings = function (className) {
       }
     }
   })
-};
+}
 
-var openModal = function (attr) {
+openModal = function (attr) {
   // open modal
   $('[data-action=' + attr + ']').on('click', function () {
     $('body').addClass('noscroll')
+
     $('.modal__bg').addClass('active').delay(150).queue(function () {
       $('.modal__container').addClass('active')
-      $(this).dequeue()
+      $.dequeue(this)
+    }).delay(50).queue(function () {
+      // focus on first input field if exists
+      if ($('.modal__content').find('.modal__form').length)
+        $('.modal__input:first').focus()
+
+      $.dequeue(this)
     })
   })
 
@@ -102,11 +110,26 @@ var openModal = function (attr) {
     $('body').removeClass('noscroll')
     $('.modal__container').removeClass('active').delay(300).queue(function () {
       $('.modal__bg').removeClass('active')
-      $(this).dequeue()
+      $.dequeue(this)
     })
   })
-};
+},
 
-var isInt = function (n) {
+checkDummyForm = function (className) {
+  $('.' + className).on('keypress focusout', function () {
+    var charCount = $(this).val().length;
+
+    if (charCount > 3) {
+      if ($(this).hasClass('invalid'))
+        $(this).removeClass('invalid')
+
+      $(this).addClass('valid')
+    } else {
+      $(this).addClass('invalid')
+    }
+  })
+},
+
+isInt = function (n) {
   return n % 1 === 0;
 };

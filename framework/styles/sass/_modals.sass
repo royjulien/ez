@@ -50,6 +50,7 @@
       visibility: visible
       +translate(-50%, -50%)
 
+  // TODO: [jr] move to headers.sass
   &__header
     height: 55px
     line-height: 56px
@@ -71,11 +72,51 @@
       padding: 14px 20px
 
   &__content
-    padding-top: 35px
+    padding-top: 20px
     height: calc(100% - 55px)
     overflow-x: hidden
     overflow-y: scroll
 
     .title
+      margin: 15px 0 7px
       font-size: 18px
       font-weight: $bold
+      text-align: center
+
+    .subtitle
+      margin: 7px 0
+      font-size: 18px
+      text-align: center
+
+  // TODO: [jr] move to forms.sass
+  &__form
+    margin-top: 20px
+
+  &__label
+    padding: 0 40px
+    font-weight: $bold
+
+  &__input
+    width: 100%
+    height: 45px
+    padding: 0 20px 0 40px
+    margin-bottom: 20px
+    border-top: 1px solid $gray--lighter
+    border-right: none
+    border-bottom: 1px solid $gray--lighter
+    border-left: none
+    line-height: 46px
+    +transition(border 233ms)
+
+    &:active,
+    &:focus
+      border-color: $blue--light
+
+    &.valid
+      border-color: $green--dark
+
+    &.invalid
+      border-color: $red
+
+
+

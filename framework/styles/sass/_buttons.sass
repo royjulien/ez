@@ -13,7 +13,7 @@ button,
   line-height: 1.5
   letter-spacing: 0.25px
   font-weight: $bold
-  +transition(color 233ms, border 233ms, box-shadow 233ms)
+  +transition(color 233ms, border 233ms)
   cursor: pointer
 
   &.white
@@ -76,6 +76,20 @@ button,
     &--borderless
       border: none
       color: $blue
+
+  &.modal
+    &__button
+      width: 100%
+      padding: 8px 0 7px
+      +border-radius(0)
+      border-top: 1px solid $gray--lighter
+      border-right: none
+      border-bottom: 1px solid $gray--lighter
+      border-left: none
+      background-color: $w
+
+      &--action
+      &--action--delete
 
   /*-------------------------*\
    * BUTTON ICON
