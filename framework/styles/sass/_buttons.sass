@@ -4,7 +4,7 @@
 button,
 .btn
   display: inline-block
-  padding: 7px 20px
+  padding: 5px 30px
   border: 2px solid
   +border-radius(35px)
   background: none
@@ -12,12 +12,12 @@ button,
   font-size: 18px
   line-height: 1.5
   letter-spacing: 0.25px
-  font-weight: 600
+  font-weight: $bold
   +transition(color 233ms, border 233ms, box-shadow 233ms)
   cursor: pointer
 
   &.white
-    border-color: $w-60
+    border-color: $w-40
     color: $w-90
 
     &:hover
@@ -33,12 +33,49 @@ button,
       background-color: $w
       color: $b-80
 
-  &.blue
+  &.gray
     border-color: $b-20
-    color: $blue--link
+    color: $gray
 
     &:hover
-      +shadow
+      border-color: $b-40
+
+    &--borderless
+      border: none
+      color: $gray
+
+  &.gray--light
+    border-color: $b-20
+    color: $gray--light
+
+    &:hover
+      border-color: $b-40
+
+    &--borderless
+      border: none
+      color: $gray--light
+
+  &.gray--lighter
+    border-color: $b-20
+    color: $gray--lighter
+
+    &:hover
+      border-color: $b-40
+
+    &--borderless
+      border: none
+      color: $gray--lighter
+
+  &.blue
+    border-color: $b-20
+    color: $blue
+
+    &:hover
+      border-color: $b-40
+
+    &--borderless
+      border: none
+      color: $blue
 
   /*-------------------------*\
    * BUTTON ICON

@@ -40,73 +40,115 @@
   </header>
 
   <ul class='tabs'>
-    <li class='tab'><a href='#designelements' class='link--tab active' title='Design Elements'>Design Elements</a></li>
+    <li class='tab'><a href='#designelements' class='link--tab' title='Design Elements'>Design Elements</a></li>
     <li class='tab'><a href='#uicomponents' class='link--tab' title='UI Components'>UI Components</a></li>
     <li class='tab'><a href='#designguidelines' class='link--tab' title='Design Guidelines'>Design Guidelines</a></li>
   </ul>
 
-  <section class='container'>
-    <aside class='sidebar'>
-      <ul class='menu--sidebar'>
-        <li class='item'>
-          <a href='#colors' class='link--header' title='Colors'>Colors</a>
-          <ul class='menu--sidebar--sub'>
-            <li class='item--sub'><a href='#palettes' class='link--sub' title='Palettes'>Palettes</a></li>
-            <li class='item--sub'><a href='#uicolors' class='link--sub' title='UI Colors'>UI Colors</a></li>
-          </ul>
-        </li>
+  <div class='containers'>
+    <section class='container' data-page-name='designelements'>
+      <aside class='sidebar'>
+        <ul class='menu--sidebar'>
+          <li class='item'>
+            <a href='#colors' class='link--header' title='Colors'>Colors</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#palettes' class='link--sub' title='Palettes'>Palettes</a></li>
+              <li class='item--sub'><a href='#uicolors' class='link--sub' title='UI Colors'>UI Colors</a></li>
+            </ul>
+          </li>
 
-        <li class='item'>
-          <a href='#colors' class='link--header' title='Typography'>Typography</a>
-          <ul class='menu--sidebar--sub'>
-            <li class='item--sub'><a href='#heading' class='link--sub' title='Heading'>Heading</a></li>
-            <li class='item--sub'><a href='#other' class='link--sub' title='Other'>Other</a></li>
-          </ul>
-        </li>
+          <li class='item'>
+            <a href='#typography' class='link--header' title='Typography'>Typography</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#heading' class='link--sub' title='Heading'>Heading</a></li>
+              <li class='item--sub'><a href='#other' class='link--sub' title='Other'>Other</a></li>
+            </ul>
+          </li>
 
-        <li class='item'>
-          <a href='#colors' class='link--header' title='Iconography'>Iconography</a>
-          <ul class='menu--sidebar--sub'>
-            <li class='item--sub'><a href='#elements' class='link--sub' title='Elements'>Elements</a></li>
-            <li class='item--sub'><a href='#featured' class='link--sub' title='Featured'>Featured</a></li>
-            <li class='item--sub'><a href='#interface' class='link--sub' title='Interface'>Interface</a></li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
+          <li class='item'>
+            <a href='#iconography' class='link--header' title='Iconography'>Iconography</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#elements' class='link--sub' title='Elements'>Elements</a></li>
+              <li class='item--sub'><a href='#featured' class='link--sub' title='Featured'>Featured</a></li>
+              <li class='item--sub'><a href='#interface' class='link--sub' title='Interface'>Interface</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
 
-    <article class='content'>
-      <header class='header--content'>
-        <h2 class='title'>Elements</h2>
-        <h3 class='subtitle'>Marketplace application cards</h3>
-      </header>
+      <article class='content'>
+        <header class='header--content'>
+          <h2 class='title'>Elements</h2>
+          <h3 class='subtitle'>Marketplace application cards</h3>
+        </header>
 
-      <div class='body'>
-        <div class='app-card'>
-          <h3 class='title'>App Card</h3>
-          <div class='card'>
-            <div class='thumbnail'>
-              <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
+        <div class='body'>
+          <button class='blue' data-action='openModal'>Modal</button>
+        </div>
+      </article>
+    </section>
+
+    <section class='container' data-page-name='uicomponents'>
+      <aside class='sidebar'>
+        <ul class='menu--sidebar'>
+          <li class='item'>
+            <a href='#popovers' class='link--header' title='popovers'>popovers</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#modals' class='link--sub' title='modals'>modals</a></li>
+              <li class='item--sub'><a href='#alert' class='link--sub' title='alert'>alert</a></li>
+            </ul>
+          </li>
+
+          <li class='item'>
+            <a href='#cards' class='link--header' title='cards'>cards</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#apps' class='link--sub' title='apps'>apps</a></li>
+              <li class='item--sub'><a href='#image' class='link--sub' title='image'>image</a></li>
+            </ul>
+          </li>
+
+          <li class='item'>
+            <a href='#tips' class='link--header' title='tips'>tips</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#options' class='link--sub' title='options'>options</a></li>
+              <li class='item--sub'><a href='#action' class='link--sub' title='action'>action</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <article class='content'>
+        <header class='header--content'>
+          <h2 class='title'>Apps Cards</h2>
+          <h3 class='subtitle'>Marketplace application cards</h3>
+        </header>
+
+        <div class='body'>
+          <div class='app-card'>
+            <h3 class='title'>App Card</h3>
+            <div class='card'>
+              <div class='thumbnail'>
+                <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
+              </div>
+              <h4 class='name'>App Name</h4>
+              <figure class='rating' data-rating='4.5'>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+              </figure>
+              <p class='description'>Two line app description at 14px font size.</p>
+              <h5 class='price'>Free</h5>
             </div>
-            <h4 class='name'>App Name</h4>
-            <figure class='rating' data-rating='4.5'>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-            </figure>
-            <p class='description'>Two line app description at 14px font size.</p>
-            <h5 class='price'>Free</h5>
-          </div>
-          <div class='snippet'>
-            <header class='header--snippet'>
-              = ui_component('cards/card', properties: <strong>{as_below}</strong>)
-              <span class='right'>
-                <a href='#psd' class='link--snippet' title='Download PSD file'>Psd</a>
-                <a href='#copy' class='link--snippet' title=''>Copy</a>
-              </span>
-            </header>
+            <div class='snippet'>
+              <header class='header--snippet'>
+                = ui_component('cards/card', properties: <strong>{as_below}</strong>)
+                <span class='right'>
+                  <a href='#psd' class='link--snippet' title='Download PSD file'>Psd</a>
+                  <a href='#copy' class='link--snippet' title=''>Copy</a>
+                </span>
+              </header>
 <pre>
 <code>
   <span class='punctuation'>{</span>
@@ -118,34 +160,90 @@
   <span class='punctuation'>}</span>
 </code>
 </pre>
-          </div>
-        </div>
-
-        <div class='app-card--action'>
-          <h3 class='title'>App Action Card</h3>
-          <div class='card'>
-            <div class='thumbnail'>
-              <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
             </div>
-            <h4 class='name'>App Name</h4>
-            <figure class='rating' data-rating='4'>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <i class='ez-star'></i>
-              <figcaption class='rating__count'>(132)</figcaption>
-            </figure>
-            <button class='blue'>Add</button>
-            <ul>
-              <li>$19/mo</li>
-              <li>14 day free trial</li>
-              <li>appwebsite.com</li>
-            </ul>
+          </div>
+
+          <div class='app-card--action'>
+            <h3 class='title'>App Action Card</h3>
+            <div class='card'>
+              <div class='thumbnail'>
+                <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
+              </div>
+              <h4 class='name'>App Name</h4>
+              <figure class='rating' data-rating='4'>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <figcaption class='rating__count'>(132)</figcaption>
+              </figure>
+              <button class='blue'>Add</button>
+              <ul class='card__items'>
+                <li class='card__item'>$19/mo</li>
+                <li class='card__item'>14 day free trial</li>
+                <li class='card__item'><a href='http://appwebsite.com' class='link' title='App website URL' target='_blank' rel='nofollow'>appwebsite.com</a></li>
+              </ul>
+            </div>
           </div>
         </div>
+      </article>
+    </section>
+
+    <section class='container' data-page-name='designguidelines'>
+      <aside class='sidebar'>
+        <ul class='menu--sidebar'>
+          <li class='item'>
+            <a href='#marketplace' class='link--header' title='marketplace'>marketplace</a>
+            <ul class='menu--sidebar--sub'>
+              <li class='item--sub'><a href='#apps' class='link--sub' title='apps'>apps</a></li>
+              <li class='item--sub'><a href='#elements' class='link--sub' title='elements'>elements</a></li>
+              <li class='item--sub'><a href='#themes' class='link--sub' title='themes'>themes</a></li>
+              <li class='item--sub'><a href='#bundles' class='link--sub' title='bundles'>bundles</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <article class='content'>
+        <header class='header--content'>
+          <h2 class='title'>Apps</h2>
+          <h3 class='subtitle'>Marketplace application</h3>
+        </header>
+
+        <div class='body'>
+          coming soon =D
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <section class='modal'>
+    <figure class='modal__bg'></figure>
+    <div class='modal__container'>
+      <header class='modal__header'>
+        <button class='gray--light--borderless left'>X</button>
+        <h1 class='title'>view title</h1>
+        <button class='blue--borderless right'>Action</button>
+      </header>
+      <div class='modal__content'>
+        <h2 class='title'>view title</h2>
+        <h3 class='subtitle'>view title</h3>
+        <form class='modal__form'>
+          <label for='name'>
+            Full Name
+            <input type='text' name='name' class='modal__input' placeholder='First and last name'>
+          </label>
+          <label for='email'>
+            Email
+            <input type='text' name='email' class='modal__input' placeholder='name@email.com'>
+          </label>
+          <button class='modal__button' data-value='Selected Option'><i class='right'>></i> Options</button>
+          <button class='modal__button--action'>Action Button</button>
+          <button class='modal__button--action--delete'>Delete Button</button>
+        </form>
       </div>
-    </article>
+    </div>
   </section>
 
   <!-- js -->

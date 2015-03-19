@@ -29,13 +29,15 @@
     list-style-type: none
 
 .link
+  color: $blue
+
   &--tab
     display: block
     height: $tab-height - $tab-modifier
     padding: 0 5px
     color: $b-45
     font-size: 11px
-    font-weight: 600
+    font-weight: $bold
     text-transform: uppercase
 
     +min-width(960px)
@@ -43,33 +45,33 @@
       font-size: 16px
 
     &:hover
-      color: $b-70
+      color: $b-30
 
     &.active
-      color: $blue--link
+      color: $blue
       border-bottom: $tab-modifier solid
 
   &--header
     display: block
     padding: 7px 14px
     font-size: 16px
-    font-weight: 600
+    font-weight: $bold
     text-transform: uppercase
 
   &--sub
     padding: 7px 14px
     color: $b-45
     font-size: 16px
-    font-weight: 600
+    font-weight: $bold
 
     &:hover,
     &.active
-      color: $blue--link
+      color: $blue
 
   &--snippet
     display: inline-block
     padding: 0 7px
-    color: $blue--link
+    color: $blue
     font-size: 12px
-    font-weight: 600
+    font-weight: $bold
     text-transform: uppercase

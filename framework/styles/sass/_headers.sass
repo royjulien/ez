@@ -7,10 +7,17 @@
     top: 0
     right: 0
     left: 0
-    +container
-    height: 85px
+    +container($global-width, 10px)
+    height: 65px
     border-bottom: 1px solid $w-20
     z-index: 1
+
+    +min-width(960px)
+      height: 85px
+      padding: 20px
+
+    +min-width($global-width + 40px)
+      padding: 20px 0
 
   /*-------------------------*\
    * PAGE HEADER LAYOUTS
@@ -20,7 +27,7 @@
 
     .bg
       +bg-cover(center, 78%) // TODO: [JR] change 78% (For PSD pixel perfect only, not for production) to center
-      +bg-fade($blue, 0.85)
+      +bg-fade(rgb(67, 131, 187), 0.85)
 
     .title
       +bg-title(50%, $w-90)
@@ -33,7 +40,7 @@
 
     .bg
       +bg-cover(center, 78%)
-      +bg-fade($blue, 0.85)
+      +bg-fade(rgb(67, 131, 187), 0.85)
 
     .title
       +bg-title(50%, $w-90)

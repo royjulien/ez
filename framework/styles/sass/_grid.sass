@@ -1,8 +1,17 @@
+.containers
+  position: relative
+  +container($global-width)
+
 .container
-  +container($global-width, 20px)
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  padding: 20px
+  width: 100%
 
   +min-width(960px)
-    margin-top: 20px
+    padding: 40px
 
 .sidebar
   display: none

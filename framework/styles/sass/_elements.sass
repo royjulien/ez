@@ -2,7 +2,7 @@
   .title
     margin-bottom: 20px
     font-size: 14px
-    font-weight: 600
+    font-weight: $bold
     text-transform: uppercase
 
 .app-card
@@ -37,13 +37,13 @@
       margin: 7px 0
       color: $b-70
       font-size: 14px
-      font-weight: 600
+      font-weight: $bold
 
     .price
       margin-top: 14px
-      color: $blue--link
+      color: $blue
       font-size: 16px
-      font-weight: 600
+      font-weight: $bold
       line-height: 1
 
   .snippet
@@ -65,6 +65,7 @@
       cursor: default
 
       +min-width(768px)
+        padding: 40px 0 0 40px
         width: 340px
 
       &:hover
@@ -77,3 +78,25 @@
     button
       padding: 7px 68px
       margin: 10px 0
+
+    .card__items
+      margin-top: 45px
+
+      .card__item
+        height: 45px
+        line-height: 45px
+        border-bottom: 1px solid $b-20
+        font-weight: $bold
+        list-style-type: none
+
+        &:last-child
+          border-bottom: none
+
+
+
+
+
+
+
+
+
