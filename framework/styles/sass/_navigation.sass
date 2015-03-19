@@ -33,6 +33,7 @@
 
   &--tab
     display: block
+    position: relative
     height: $tab-height - $tab-modifier
     padding: 0 5px
     color: $b-45
@@ -45,11 +46,10 @@
       font-size: 16px
 
     &:hover
-      color: $b-30
+      color: $gray--light
 
     &.active
       color: $blue
-      border-bottom: $tab-modifier solid
 
   &--header
     display: block

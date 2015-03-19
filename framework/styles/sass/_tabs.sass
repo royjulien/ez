@@ -3,7 +3,7 @@
 /*-------------------------*/
 .tabs
   height: $tab-height
-  border-bottom: $tab-modifier solid $b-10
+  border-bottom: $tab-modifier solid $gray--lighter
   background-color: $w-98
   line-height: $tab-height + $tab-modifier
   text-align: center
@@ -22,3 +22,12 @@
       display: inline-block
       width: auto
       float: none
+
+    &--indicator
+      position: absolute
+      bottom: -$tab-modifier
+      right: 0
+      left: 0
+      height: $tab-modifier
+      background-color: $blue
+      +transition(transform 250ms)
