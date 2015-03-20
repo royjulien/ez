@@ -10,10 +10,10 @@
     height: 100%
     background-color: $b-40
     +backface-visibility
-    +transition(opacity 233ms, visibility 233ms)
     opacity: 0
     visibility: hidden
     z-index: 9
+    +transition(opacity 233ms, visibility 233ms)
 
     &.active
       opacity: 1
@@ -28,12 +28,13 @@
     height: 490px
     +box-shadow(0 0 0 1px $b-05, 0 0 10px $b-10)
     background-color: $gray--lightest
-    +translate(-50%, -48%)
     +backface-visibility
-    +transition(opacity 233ms, transform 233ms, visibility 233ms)
     opacity: 0
     visibility: hidden
+    overflow: hidden
     z-index: 10
+    +translate(-50%, -48%)
+    +transition(opacity 233ms, transform 233ms, visibility 233ms)
 
     &:before
       content: ''
@@ -50,32 +51,71 @@
       visibility: visible
       +translate(-50%, -50%)
 
-  // TODO: [jr] move to headers.sass
-  &__header
+  &__headers
+    position: relative
     height: 55px
     line-height: 56px
     border-bottom: 1px solid $gray--lighter
     background-color: $w
+    z-index: 1
+
+  &__header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    visibility: hidden
+    +transition(opacity 350ms, visibility 350ms)
+
+    &.active
+      opacity: 1
+      visibility: visible
 
     .title
       position: absolute
       left: 0
       right: 0
-      width: 50%
+      width: 70%
       margin: auto
       font-size: 16px
       font-weight: $bold
       text-align: center
       text-transform: uppercase
+      +transition(transform 750ms cubic-bezier(0,1,0,1))
+
+      &.passive
+        +translateX(-40%)
+
+      &.active
+        +translateX(0)
+
+      &.inactive
+        +translateX(40%)
 
     button
       padding: 14px 20px
 
   &__content
-    padding-top: 20px
+    position: absolute
+    top: 55px
+    left: 0
+    width: 100%
     height: calc(100% - 55px)
+    padding-top: 20px
+    background-color: $gray--lightest
     overflow-x: hidden
     overflow-y: scroll
+
+    &.passive
+      +translateX(-15%)
+
+    &.active
+      +translateX(0)
+
+    &.inactive
+      +translateX(101.5%)
 
     .title
       margin: 15px 0 7px
@@ -87,36 +127,3 @@
       margin: 7px 0
       font-size: 18px
       text-align: center
-
-  // TODO: [jr] move to forms.sass
-  &__form
-    margin-top: 20px
-
-  &__label
-    padding: 0 40px
-    font-weight: $bold
-
-  &__input
-    width: 100%
-    height: 45px
-    padding: 0 20px 0 40px
-    margin-bottom: 20px
-    border-top: 1px solid $gray--lighter
-    border-right: none
-    border-bottom: 1px solid $gray--lighter
-    border-left: none
-    line-height: 46px
-    +transition(border 233ms)
-
-    &:active,
-    &:focus
-      border-color: $blue--light
-
-    &.valid
-      border-color: $green--dark
-
-    &.invalid
-      border-color: $red
-
-
-

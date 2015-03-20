@@ -4,7 +4,8 @@ $(function () {
 
   tabSwitch('link--tab')
   ratings('rating')
-  openModal('openModal')
+  modal()
+  modalSwitch('data-modal-switch')
   checkDummyForm('modal__input')
 })
 
@@ -42,14 +43,16 @@ var tabSwitch = function (className) {
     $('.container:first').fadeIn(177)
   }
 
+  var activeTab, linkName, index;
+
   // switch tab/container state onclick
   $('.' + className).on('click', function () {
     // prevent from triggering on current tab
     if ($(this).hasClass('active')) return
 
-    var activeTab = $('.' + className + '.active'),
-        linkName = $(this).attr('href').replace('#', ''),
-        index = $(this).parent().index();
+    activeTab = $('.' + className + '.active')
+    linkName = $(this).attr('href').replace('#', '')
+    index = $(this).parent().index()
 
     // toggle tab class
     activeTab.removeClass('active')
@@ -86,15 +89,16 @@ ratings = function (className) {
       }
     }
   })
-}
+},
 
-openModal = function (attr) {
+modal = function () {
   // open modal
-  $('[data-action=' + attr + ']').on('click', function () {
+  $('[data-modal-open]').on('click', function () {
     $('body').addClass('noscroll')
 
     $('.modal__bg').addClass('active').delay(150).queue(function () {
-      $('.modal__container').addClass('active')
+      $('.modal__container:first, .modal__content:first, .modal__headers .modal__header:first, .modal__headers .modal__header:first .title').addClass('active')
+      $('.modal__content:gt(0), .modal__header:gt(0) .title').addClass('inactive')
       $.dequeue(this)
     }).delay(50).queue(function () {
       // focus on first input field if exists
@@ -106,18 +110,64 @@ openModal = function (attr) {
   })
 
   // close modal
-  $('.modal__bg').on('click', function () {
+  $('.modal__bg, [data-modal-close]').on('click', function () {
     $('body').removeClass('noscroll')
     $('.modal__container').removeClass('active').delay(300).queue(function () {
-      $('.modal__bg').removeClass('active')
+      $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
       $.dequeue(this)
     })
   })
 },
 
+modalSwitch = function (attr) {
+  var attrValue, activeContent, activeContentIndex, activeHeader, activeTitle, activateContent, activateContentIndex, activateHeader, activateTitle;
+
+  $('[' + attr + ']').on('click', function () {
+    attrValue = $(this).data('modal-switch')
+
+    activeContent = $('.modal__content.active')
+    activeContentIndex = activeContent.index()
+    activeHeader = $('.modal__header.active')
+    activeTitle = $('.title.active')
+
+    activateContent = $('.modal__content[data-modal-name=' + attrValue + ']')
+    activateContentIndex = activateContent.index()
+    activateHeader = $('.modal__header[data-modal-name=' + attrValue + ']')
+    activateTitle = $('.modal__header[data-modal-name=' + attrValue + '] .title')
+
+    if (activeContentIndex < activateContentIndex) {
+      activeContent.addClass('passive easeToPassive').removeClass('active').delay(750).queue(function () {
+        $(this).removeClass('easeToPassive').dequeue()
+      })
+      activeHeader.removeClass('active')
+      activeTitle.addClass('passive').removeClass('active')
+
+      activateContent.addClass('active easeToActive').removeClass('inactive').delay(750).queue(function () {
+        $(this).removeClass('easeToActive').dequeue()
+      })
+      activateHeader.addClass('active')
+      activateTitle.addClass('active').removeClass('inactive')
+    } else {
+      activeContent.addClass('inactive easeToActive').removeClass('active').delay(750).queue(function () {
+        $(this).removeClass('easeToActive').dequeue()
+      })
+      activeHeader.removeClass('active')
+      activeTitle.addClass('inactive').removeClass('active')
+
+      activateContent.addClass('active easeToPassive').removeClass('passive').delay(750).queue(function () {
+        $(this).removeClass('easeToPassive').dequeue()
+      })
+      activateHeader.addClass('active')
+      activateTitle.addClass('active').removeClass('passive')
+    }
+  })
+},
+
 checkDummyForm = function (className) {
+  var charCount;
+
   $('.' + className).on('keypress focusout', function () {
-    var charCount = $(this).val().length;
+    charCount = $(this).val().length
 
     if (charCount > 3) {
       if ($(this).hasClass('invalid'))

@@ -1,0 +1,101 @@
+.modal
+  &__form
+    margin-top: 20px
+
+  &__label
+    padding: 0 40px
+    font-weight: $bold
+
+  &__input
+    width: 100%
+    height: 45px
+    padding: 0 20px 0 40px
+    margin-bottom: 20px
+    border-top: 1px solid $gray--lighter
+    border-right: none
+    border-bottom: 1px solid $gray--lighter
+    border-left: none
+    +border-radius(0)
+    line-height: 46px
+    +transition(border 233ms)
+
+    &:active,
+    &:focus
+      border-color: $blue--light
+
+    &.valid
+      border-color: $green--dark
+
+    &.invalid
+      border-color: $red
+
+  &__button
+    position: relative
+    width: 100%
+    height: 45px
+    padding: 0 20px 0 40px
+    +border-radius(0)
+    border-top: 1px solid $gray--lighter
+    border-right: none
+    border-bottom: 1px solid $gray--lighter
+    border-left: none
+    background-color: $w
+    font-size: 16px
+    text-align: left
+    line-height: 46px
+
+    &:after
+      content: attr(data-value)
+      position: absolute
+      right: 40px
+      color: $gray
+      font-weight: $regular
+      +transition(color 177ms)
+
+    i
+      position: relative
+      top: 1px
+      color: $gray--light
+
+    &:hover
+      &:after
+        color: $blue
+
+    &--group
+      margin-bottom: 20px
+      border-top: 1px solid $gray--lighter
+      border-bottom: 1px solid $gray--lighter
+      background-color: $w
+
+      .modal__button
+        border: none
+
+        &:before
+          content: ''
+          position: absolute
+          bottom: 0
+          width: 100%
+          border-bottom: 1px solid $gray--lighter
+
+        &:last-child
+          &:before
+            border-bottom: none
+
+    &--action
+      @extend .modal__button
+      margin-bottom: 20px
+      color: $blue
+      text-align: center
+
+    &--action--delete
+      @extend .modal__button
+      margin-bottom: 20px
+      color: $red
+      text-align: center
+
+    &--dropdown
+      @extend .modal__button
+      margin-bottom: 20px
+
+      &:after
+        color: $gray--darker
