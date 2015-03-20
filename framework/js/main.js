@@ -100,7 +100,7 @@ modalActions = function () {
   $('[data-modal-open]').on('click', function () {
     $('body').addClass('noscroll')
 
-    $('.modal__bg').addClass('active').delay(150).queue(function () {
+    $('.modal__bg').addClass('active').delay(177).queue(function () {
       $('[data-modal-name=single], .modal__content:first, .modal__headers .modal__header:first, .modal__headers .modal__header:first .title').addClass('active')
       $('.modal__content:gt(0), .modal__header:gt(0) .title').addClass('inactive')
       $.dequeue(this)
@@ -116,7 +116,7 @@ modalActions = function () {
   // close all modals and reset states
   $('.modal__bg').on('click', function () {
     $('body').removeClass('noscroll')
-    $('.modal__container').removeClass('active').delay(300).queue(function () {
+    $('.modal__container').removeClass('active').delay(333).queue(function () {
       $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
       $.dequeue(this)
     })
@@ -127,7 +127,7 @@ modalActions = function () {
     $(this).parents('.modal__container').removeClass('active')
     if ($(this).parents('.modal__container').data('modal-name') === $('.modal__container:first').data('modal-name')) {
       $('body').removeClass('noscroll')
-      $('.modal__container').removeClass('active').delay(300).queue(function () {
+      $('.modal__container').removeClass('active').delay(333).queue(function () {
         $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
         $.dequeue(this)
       })
@@ -148,12 +148,9 @@ modalSectionSwitch = function (attr) {
     attrValue = $(this).data('section-switch')
 
     activeContent = $(this).parents('.modal__container').find('.modal__content.active')
-    console.log(activeContent)
     activeContentIndex = activeContent.index()
     activeHeader = $(this).parents('.modal__container').find('.modal__header.active')
-    console.log(activeHeader)
     activeTitle = $(this).parents('.modal__container').find('.title.active')
-    console.log(activeTitle)
 
     activateContent = $('.modal__content[data-section-name=' + attrValue + ']')
     activateContentIndex = activateContent.index()

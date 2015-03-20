@@ -2032,8 +2032,8 @@ button,
   -ms-transform: translate(-50%, -40%);
   -o-transform: translate(-50%, -40%);
   transform: translate(-50%, -40%);
-  -o-transition: opacity 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1), visibility 610ms;
-  transition: opacity 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1), visibility 610ms; }
+  -o-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1);
+  transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
       -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); } }
@@ -2054,20 +2054,28 @@ button,
     -moz-transform: translate(-50%, -40%); } }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
-      -webkit-transition: opacity 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1), visibility 610ms; } }
+      -webkit-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
 @-moz-document url-prefix() {
   .modal__container {
-    -moz-transition: opacity 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1), visibility 610ms; } }
+    -moz-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
   .modal__container:first-of-type {
     -ms-transform: translate(-50%, -48%);
     -o-transform: translate(-50%, -48%);
-    transform: translate(-50%, -48%); }
+    transform: translate(-50%, -48%);
+    -o-transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1);
+    transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       .modal__container:first-of-type {
         -webkit-transform: translate(-50%, -48%); } }
 @-moz-document url-prefix() {
   .modal__container:first-of-type {
     -moz-transform: translate(-50%, -48%); } }
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      .modal__container:first-of-type {
+        -webkit-transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
+@-moz-document url-prefix() {
+  .modal__container:first-of-type {
+    -moz-transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
   .modal__container:before {
     content: "";
     position: absolute;
@@ -2104,14 +2112,14 @@ button,
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  -o-transition: opacity 350ms, visibility 350ms;
-  transition: opacity 350ms, visibility 350ms; }
+  -o-transition: opacity 333ms, visibility 333ms;
+  transition: opacity 333ms, visibility 333ms; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__header {
-      -webkit-transition: opacity 350ms, visibility 350ms; } }
+      -webkit-transition: opacity 333ms, visibility 333ms; } }
 @-moz-document url-prefix() {
   .modal__header {
-    -moz-transition: opacity 350ms, visibility 350ms; } }
+    -moz-transition: opacity 333ms, visibility 333ms; } }
   .modal__header.active {
     opacity: 1;
     visibility: visible; }
@@ -2133,36 +2141,38 @@ button,
 @-moz-document url-prefix() {
   .modal__header .title {
     -moz-transition: transform 750ms cubic-bezier(0, 0.8, 0, 1); } }
-  .modal__header[data-moda-name='single'] .title.passive {
+  .modal__header[data-section-name="single"] .title.passive, .modal__header[data-section-name="slide"] .title.passive {
     -ms-transform: translateX(-40%);
     -o-transform: translateX(-40%);
     transform: translateX(-40%); }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
-      .modal__header[data-moda-name='single'] .title.passive {
+      .modal__header[data-section-name="single"] .title.passive, .modal__header[data-section-name="slide"] .title.passive {
         -webkit-transform: translateX(-40%); } }
 @-moz-document url-prefix() {
-  .modal__header[data-moda-name='single'] .title.passive {
+  .modal__header[data-section-name="single"] .title.passive, .modal__header[data-section-name="slide"] .title.passive {
     -moz-transform: translateX(-40%); } }
-  .modal__header[data-moda-name='single'] .title.active {
+  .modal__header[data-section-name="single"] .title.active, .modal__header[data-section-name="slide"] .title.active {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0); }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
-      .modal__header[data-moda-name='single'] .title.active {
+      .modal__header[data-section-name="single"] .title.active, .modal__header[data-section-name="slide"] .title.active {
         -webkit-transform: translateX(0); } }
 @-moz-document url-prefix() {
-  .modal__header[data-moda-name='single'] .title.active {
+  .modal__header[data-section-name="single"] .title.active, .modal__header[data-section-name="slide"] .title.active {
     -moz-transform: translateX(0); } }
-  .modal__header[data-moda-name='single'] .title.inactive {
+  .modal__header[data-section-name="single"] .title.inactive, .modal__header[data-section-name="slide"] .title.inactive {
     -ms-transform: translateX(40%);
     -o-transform: translateX(40%);
     transform: translateX(40%); }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
-      .modal__header[data-moda-name='single'] .title.inactive {
+      .modal__header[data-section-name="single"] .title.inactive, .modal__header[data-section-name="slide"] .title.inactive {
         -webkit-transform: translateX(40%); } }
 @-moz-document url-prefix() {
-  .modal__header[data-moda-name='single'] .title.inactive {
+  .modal__header[data-section-name="single"] .title.inactive, .modal__header[data-section-name="slide"] .title.inactive {
     -moz-transform: translateX(40%); } }
+  .modal__header[data-section-name="action"] {
+    background-color: #f8f8f8; }
   .modal__header button {
     padding: 14px 20px; }
 .modal__content {
@@ -2214,6 +2224,8 @@ button,
     margin: 7px 0;
     font-size: 18px;
     text-align: center; }
+  .modal__content[data-section-name="action"] {
+    background-color: white; }
 
 .easeToPassive {
   -o-transition: transform 750ms cubic-bezier(0, 0.8, 0, 1);

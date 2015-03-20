@@ -35,10 +35,11 @@
     overflow: hidden
     z-index: 10
     +translate(-50%, -40%)
-    +transition(opacity 610ms, transform 610ms cubic-bezier(0,.8,0,1), visibility 610ms)
+    +transition(opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0,.8,0,1))
 
     &:first-of-type
       +translate(-50%, -48%)
+      +transition(opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0,.8,0,1))
 
     &:before
       content: ''
@@ -71,7 +72,7 @@
     height: 100%
     opacity: 0
     visibility: hidden
-    +transition(opacity 350ms, visibility 350ms)
+    +transition(opacity 333ms, visibility 333ms)
 
     &.active
       opacity: 1
@@ -89,7 +90,8 @@
       text-transform: uppercase
       +transition(transform 750ms cubic-bezier(0,.8,0,1))
 
-    &[data-moda-name='single']
+    &[data-section-name="single"],
+    &[data-section-name="slide"]
       .title
         &.passive
           +translateX(-40%)
@@ -99,6 +101,9 @@
 
         &.inactive
           +translateX(40%)
+
+    &[data-section-name="action"]
+      background-color: $gray--lightest
 
     button
       padding: 14px 20px
@@ -133,3 +138,6 @@
       margin: 7px 0
       font-size: 18px
       text-align: center
+
+    &[data-section-name="action"]
+      background-color: $w
