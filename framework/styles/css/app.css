@@ -1110,7 +1110,7 @@ textarea {
   .rating .ez-star--half {
     position: relative; }
     .rating .ez-star--half:before {
-      content: "";
+      content: "";
       color: #ffe9d5; }
     .rating .ez-star--half.active:after {
       position: absolute;
@@ -2099,8 +2099,8 @@ button,
   -ms-transform: translate(-50%, 100%);
   -o-transform: translate(-50%, 100%);
   transform: translate(-50%, 100%);
-  -o-transition: opacity 177ms, visibility 177ms, transform 610ms ease-out;
-  transition: opacity 177ms, visibility 177ms, transform 610ms ease-out; }
+  -o-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1);
+  transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
       -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); } }
@@ -2121,10 +2121,10 @@ button,
     -moz-transform: translate(-50%, 100%); } }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
-      -webkit-transition: opacity 177ms, visibility 177ms, transform 610ms ease-out; } }
+      -webkit-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
 @-moz-document url-prefix() {
   .modal__container {
-    -moz-transition: opacity 177ms, visibility 177ms, transform 610ms ease-out; } }
+    -moz-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
   .modal__container:first-of-type {
     -ms-transform: translate(-50%, 2%);
     -o-transform: translate(-50%, 2%);
