@@ -3,11 +3,16 @@ $(function () {
   'use strict'
 
   tabSwitch('link--tab')
+
   ratings('rating')
+
   modalActions()
   modalSectionSwitch('data-section-switch')
   modalSwitch('data-modal-switch')
+
   checkDummyForm('modal__input')
+
+  buttonLoad('data-button-load')
 })
 
 var tabSwitch = function (className) {
@@ -212,6 +217,27 @@ checkDummyForm = function (className) {
     }
   })
 },
+
+buttonLoad = function (attr) {
+  var button = $('[' + attr + ']'),
+      text = button.find('.value'),
+      path = button.find('.path--loader');
+
+  button.on('click', function () {
+    text.fadeOut(177).delay(0).queue(function () {
+      $(this).text('Loading').dequeue()
+    }).fadeIn(177)
+
+    path.attr('class', 'path--loader loading').delay(1500).queue(function () {
+      text.fadeOut(177).delay(0).queue(function () {
+        $(this).text('Added').dequeue()
+      }).fadeIn(177)
+
+      path.attr('class', 'path--loader')
+      $.dequeue(this)
+    })
+  })
+}
 
 isInt = function (n) {
   return n % 1 === 0;

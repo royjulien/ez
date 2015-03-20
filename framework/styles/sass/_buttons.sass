@@ -3,6 +3,7 @@
 /*-------------------------*/
 button,
 .btn
+  position: relative
   display: inline-block
   padding: 5px 30px
   border: 2px solid
@@ -76,6 +77,50 @@ button,
     &--borderless
       border: none
       color: $blue
+
+  &.svg
+    width: 173px
+    height: 43px
+    border-color: $gray--lighter
+    color: $blue
+
+    .value
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      line-height: 43px
+
+  &--svg
+    position: absolute
+    top: -3px
+    left: -3px
+    width: 175px
+    height: 45px
+    fill: none
+
+    &:hover
+      .path
+        stroke: $gray--light
+
+    .path
+      stroke: $gray--lighter
+      stroke-linecap: round
+      stroke-width: 2
+      +transition(stroke 233ms)
+
+      &--loader
+        stroke: $blue
+        stroke-linecap: round
+        stroke-width: 2
+        stroke-dasharray: 400
+        stroke-dashoffset: 400
+
+        &.loading
+          stroke-dashoffset: 0
+          +transition(stroke-dashoffset 1.5s ease)
 
   /*-------------------------*\
    * BUTTON ICON
