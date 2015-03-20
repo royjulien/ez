@@ -1290,18 +1290,23 @@ textarea {
   line-height: 57px;
   text-align: center; }
   .tabs .tab {
+    display: none;
     list-style: none; }
     @media screen and (max-width: 959px) {
       .tabs .tab:first-child:nth-last-child(1), .tabs .tab:first-child:nth-last-child(1) ~ .tab {
+        display: block;
         float: left;
         width: 100%; }
       .tabs .tab:first-child:nth-last-child(2), .tabs .tab:first-child:nth-last-child(2) ~ .tab {
+        display: block;
         float: left;
         width: 50%; }
       .tabs .tab:first-child:nth-last-child(3), .tabs .tab:first-child:nth-last-child(3) ~ .tab {
+        display: block;
         float: left;
         width: 33.33333%; }
       .tabs .tab:first-child:nth-last-child(4), .tabs .tab:first-child:nth-last-child(4) ~ .tab {
+        display: block;
         float: left;
         width: 25%; } }
     @media screen and (min-width: 960px) {
@@ -1640,7 +1645,7 @@ button,
         background-size: 45%;
         background-position: center;
         background-repeat: no-repeat;
-        background-color: #f8f8f8;
+        background-color: #d4d5d6;
         overflow: hidden; }
         @media screen and (-webkit-min-device-pixel-ratio: 0) {
           .app-card .card .thumbnail .icon, .app-card--action .card .thumbnail .icon {
@@ -2017,7 +2022,7 @@ button,
     overflow: hidden; }
 .modal__container {
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 50%;
   width: 100%;
   max-width: 620px;
@@ -2029,11 +2034,11 @@ button,
   visibility: hidden;
   overflow: hidden;
   z-index: 10;
-  -ms-transform: translate(-50%, -40%);
-  -o-transform: translate(-50%, -40%);
-  transform: translate(-50%, -40%);
-  -o-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1);
-  transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); }
+  -ms-transform: translate(-50%, 100%);
+  -o-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+  -o-transition: opacity 177ms, visibility 177ms, transform 610ms ease-out;
+  transition: opacity 177ms, visibility 177ms, transform 610ms ease-out; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
       -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); } }
@@ -2048,28 +2053,28 @@ button,
     -moz-backface-visibility: hidden; } }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
-      -webkit-transform: translate(-50%, -40%); } }
+      -webkit-transform: translate(-50%, 100%); } }
 @-moz-document url-prefix() {
   .modal__container {
-    -moz-transform: translate(-50%, -40%); } }
+    -moz-transform: translate(-50%, 100%); } }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .modal__container {
-      -webkit-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
+      -webkit-transition: opacity 177ms, visibility 177ms, transform 610ms ease-out; } }
 @-moz-document url-prefix() {
   .modal__container {
-    -moz-transition: opacity 177ms, visibility 177ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
+    -moz-transition: opacity 177ms, visibility 177ms, transform 610ms ease-out; } }
   .modal__container:first-of-type {
-    -ms-transform: translate(-50%, -48%);
-    -o-transform: translate(-50%, -48%);
-    transform: translate(-50%, -48%);
+    -ms-transform: translate(-50%, 2%);
+    -o-transform: translate(-50%, 2%);
+    transform: translate(-50%, 2%);
     -o-transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1);
     transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       .modal__container:first-of-type {
-        -webkit-transform: translate(-50%, -48%); } }
+        -webkit-transform: translate(-50%, 2%); } }
 @-moz-document url-prefix() {
   .modal__container:first-of-type {
-    -moz-transform: translate(-50%, -48%); } }
+    -moz-transform: translate(-50%, 2%); } }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       .modal__container:first-of-type {
         -webkit-transition: opacity 610ms, visibility 610ms, transform 610ms cubic-bezier(0, 0.8, 0, 1); } }
@@ -2088,15 +2093,15 @@ button,
   .modal__container.active {
     opacity: 1;
     visibility: visible;
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       .modal__container.active {
-        -webkit-transform: translate(-50%, -50%); } }
+        -webkit-transform: translate(-50%, 0); } }
 @-moz-document url-prefix() {
   .modal__container.active {
-    -moz-transform: translate(-50%, -50%); } }
+    -moz-transform: translate(-50%, 0); } }
 .modal__headers {
   position: relative;
   height: 55px;

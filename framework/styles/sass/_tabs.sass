@@ -9,12 +9,14 @@
   text-align: center
 
   .tab
+    display: none
     list-style: none
 
     +max-width(959px)
       @for $i from 1 through $max-number-of-tabs
         &:first-child:nth-last-child(#{$i}),
         &:first-child:nth-last-child(#{$i}) ~ .tab,
+          display: block
           float: left
           width: 100% / $i
 
