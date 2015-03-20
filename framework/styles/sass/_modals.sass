@@ -34,7 +34,7 @@
     overflow: hidden
     z-index: 10
     +translate(-50%, -40%)
-    +transition(opacity 233ms, transform 233ms, visibility 233ms)
+    +transition(opacity 233ms, transform 610ms cubic-bezier(0,.8,0,1), visibility 233ms)
 
     &:first-of-type
       +translate(-50%, -48%)
@@ -88,14 +88,16 @@
       text-transform: uppercase
       +transition(transform 750ms cubic-bezier(0,.8,0,1))
 
-      &.passive
-        +translateX(-40%)
+    &[data-moda-name='single']
+      .title
+        &.passive
+          +translateX(-40%)
 
-      &.active
-        +translateX(0)
+        &.active
+          +translateX(0)
 
-      &.inactive
-        +translateX(40%)
+        &.inactive
+          +translateX(40%)
 
     button
       padding: 14px 20px

@@ -4,7 +4,7 @@ $(function () {
 
   tabSwitch('link--tab')
   ratings('rating')
-  initModal()
+  modalActions()
   modalSectionSwitch('data-section-switch')
   modalSwitch('data-modal-switch')
   checkDummyForm('modal__input')
@@ -92,7 +92,7 @@ ratings = function (className) {
   })
 },
 
-initModal = function () {
+modalActions = function () {
   // open modal
   $('[data-modal-open]').on('click', function () {
     $('body').addClass('noscroll')
@@ -124,9 +124,14 @@ initModal = function () {
     $(this).parents('.modal__container').removeClass('active')
     if ($(this).parents('.modal__container').data('modal-name') === $('.modal__container:first').data('modal-name')) {
       $('body').removeClass('noscroll')
-      $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
+      $('.modal__container').removeClass('active').delay(300).queue(function () {
+        $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
+        $.dequeue(this)
+      })
     } else {
-      $(this).find('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
+      $(this).find('.modal__content').removeClass('passive active')
+      $(this).find('.modal__header').removeClass('passive active')
+      $(this).find('.modal__header .title').removeClass('passive active')
     }
   })
 },
@@ -139,10 +144,13 @@ modalSectionSwitch = function (attr) {
 
     attrValue = $(this).data('section-switch')
 
-    activeContent = $('.modal__content.active')
+    activeContent = $(this).parents('.modal__container').find('.modal__content.active')
+    console.log(activeContent)
     activeContentIndex = activeContent.index()
-    activeHeader = $('.modal__header.active')
-    activeTitle = $('.title.active')
+    activeHeader = $(this).parents('.modal__container').find('.modal__header.active')
+    console.log(activeHeader)
+    activeTitle = $(this).parents('.modal__container').find('.title.active')
+    console.log(activeTitle)
 
     activateContent = $('.modal__content[data-section-name=' + attrValue + ']')
     activateContentIndex = activateContent.index()
