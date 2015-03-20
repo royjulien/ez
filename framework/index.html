@@ -22,7 +22,7 @@
 <body class='ez'>
   <header class='header--menu'>
     <nav class='menu--global'>
-      <button class='white--borderless'><i class='w-icon-hamburger left'></i> Menu</button>
+      <button class='white--borderless'><i class='ez-menu left'></i> Menu</button>
     </nav>
     <figure class='logo--center'>
       <i class='icon'></i>
@@ -35,8 +35,7 @@
 
   <header class='header--short'>
     <figure class='bg' style='background-image:url(img/bg.jpg)'></figure>
-    <h2 class='title'>Style Framework</h2>
-    <h3 class='subtitle'>2015</h3>
+    <h2 class='title'>Style Framework <span class='subtitle'>2015</span></h2>
   </header>
 
   <ul class='tabs'>
@@ -128,7 +127,7 @@
             <h3 class='title'>App Card</h3>
             <div class='card'>
               <div class='thumbnail'>
-                <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
+                <figure class='icon' style='background-image:url(img/mailchimp.png); background-color: #77cff2'></figure>
               </div>
               <h4 class='name'>App Name</h4>
               <figure class='rating' data-rating='4.5'>
@@ -167,7 +166,7 @@
             <h3 class='title'>App Action Card</h3>
             <div class='card'>
               <div class='thumbnail'>
-                <figure class='icon' style='background-image:url(img/mailchimp.png)'></figure>
+                <figure class='icon' style='background-image:url(img/mailchimp.png); background-color: #77cff2'></figure>
               </div>
               <h4 class='name'>App Name</h4>
               <figure class='rating' data-rating='4'>
@@ -209,10 +208,44 @@
         <header class='header--content'>
           <h2 class='title'>Apps</h2>
           <h3 class='subtitle'>Marketplace application</h3>
+
+          <section class='requirements'>
+            <header class='header--snippet'>
+              <strong>Required Assets</strong>
+              <span class='right'>
+                <a href='#download-zip' class='link--snippet' title='Download all assets'>Download Zip</a>
+              </span>
+            </header>
+            <ul class='requirements__list'>
+              <li class='requirements__item'><figure class='format-icon--blue'>png</figure> App Icon 102 x 66px &amp; 204 x 132px</li>
+              <li class='requirements__item'><figure class='format-icon--orange'>svg</figure> Element Icon 70 x 40px (grayscale)</li>
+              <li class='requirements__item'><figure class='format-icon--green'>jpg</figure> Featured Image 462 x 286px &amp; 924 x 572px</li>
+              <li class='requirements__item'><figure class='format-icon--green'>jpg</figure> App Screenshots 716 x 442px &amp; 1432 x 884px</li>
+            </ul>
+          </section>
         </header>
 
         <div class='body'>
-          coming soon =D
+          
+          <div class='app-card'>
+            <h3 class='title'>App Card</h3>
+            <div class='card'>
+              <div class='thumbnail'>
+                <figure class='icon'></figure>
+              </div>
+              <h4 class='name'>App Name</h4>
+              <figure class='rating' data-rating='4.5'>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+                <i class='ez-star'></i>
+              </figure>
+              <p class='description'>Two line app description at 14px font size.</p>
+              <h5 class='price'>Free</h5>
+            </div>
+          </div>
+
         </div>
       </article>
     </section>
@@ -225,7 +258,7 @@
     <div class='modal__container' data-modal-name='single'>
       <header class='modal__headers'>
         <div class='modal__header' data-section-name='single'>
-          <button class='gray--light--borderless left' data-modal-close>X</button>
+          <button class='gray--light--borderless left' data-modal-close><i class='ez-close'></i></button>
           <h1 class='title'>Welcome Title</h1>
           <button class='blue--borderless right'>Action</button>
         </div>
@@ -249,17 +282,17 @@
               Email
               <input type='text' name='email' class='modal__input' placeholder='name@email.com'>
             </label>
-            <button class='modal__button--dropdown' data-value='Selected Option'><i class='w-icon-chevron-right-light right'></i> Options</button>
-            <button class='modal__button' data-value='Secondary text' data-section-switch='slide'><i class='w-icon-chevron-right-light right'></i> Button</button>
+            <button class='modal__button--dropdown' data-value='Selected Option'><i class='ez-chevron-right right'></i> Options</button>
+            <button class='modal__button' data-value='Secondary text' data-section-switch='slide'><i class='ez-chevron-right right'></i> Button</button>
           </form>
         </div>
 
         <div class='modal__content' data-section-name='slide'>
           <button class='modal__button--action' data-modal-switch='action'>Action Button</button>
           <div class='modal__button--group'>
-            <button class='modal__button' data-value='Secondary text'><i class='w-icon-chevron-right-light right'></i> Options</button>
-            <button class='modal__button' data-value='Secondary text'><i class='w-icon-chevron-right-light right'></i> Options</button>
-            <button class='modal__button' data-value='Secondary text'><i class='w-icon-chevron-right-light right'></i> Options</button>
+            <button class='modal__button' data-value='Secondary text'><i class='ez-chevron-right right'></i> Options</button>
+            <button class='modal__button' data-value='Secondary text'><i class='ez-chevron-right right'></i> Options</button>
+            <button class='modal__button' data-value='Secondary text'><i class='ez-chevron-right right'></i> Options</button>
           </div>
           <button class='modal__button--action--delete'>Delete Button</button>
         </div>
@@ -283,7 +316,7 @@
 
       <div class='modal__contents'>
         <div class='modal__content' data-section-name='action'>
-          <button class='modal__button' data-value='Secondary text' data-section-switch='progress'><i class='w-icon-chevron-right-light right'></i> Button</button>
+          <button class='modal__button' data-value='Secondary text' data-section-switch='progress'><i class='ez-chevron-right right'></i> Button</button>
         </div>
 
         <div class='modal__content' data-section-name='progress'>

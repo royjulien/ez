@@ -32,26 +32,31 @@ $gray--lightest: rgb(248,248,248) // #f8f8f8
 $gray--lighter: rgb(212,213,214) // #d4d5d6
 $gray--light: rgb(183,187,189) // #b7bbbd
 $gray: rgb(155,160,163) // #9ba0a3
+$gray--darkish: rgb(128,134,138) // #80868a
 $gray--dark: rgb(102,108,112) // #666c70
-$gray--darker: rgb(54,59,62) // # 363b3e
+$gray--darker: rgb(54,59,62) // #363b3e
 
-$blue--lighter: rgb(246,251,255)
-$blue--light: rgb(122,193,255)
-$blue: rgb(41,144,234)
-$blue--dark: rgb(38,129,209)
-$blue--darker: rgb(24,82,133)
+$blue--lighter: rgb(246,251,255) // #f6fbff
+$blue--light: rgb(122,193,255) // #7ac1ff
+$blue: rgb(41,144,234) // #2990ea
+$blue--dark: rgb(38,129,209) // #2681d1
+$blue--darker: rgb(24,82,133) // #185285
 
-$green--light: rgb(162,224,163)
-$green: rgb(70,193,72)
-$green--dark: rgb(61,168,62)
+$green--lighter: rgb(162,224,163) // #a2e0a3
+$green--light: rgb(81,181,83) // #51b553
+$green: rgb(70,193,72) // #46c148
+$green--dark: rgb(61,168,62) // #3da83e
 
-$orange: rgb(255, 143, 46)
-$orange--light: rgb(255, 233, 213)
+$orange--light: rgb(255,233,213) // #ffc796
+$orange: rgb(255,143,46) // #ff8f2e
+$orange--dark: rgb(230,129,41) // #e68129
 
-$red--lighter: rgb(255,242,242)
-$red--light: rgb(255,122,122)
-$red: rgb(225,58,58)
-$red--dark: rgb(199,52,52)
+$blood-orange: rgb(231,129,61) // #e7813d
+
+$red--lighter: rgb(255,242,242) // #fff2f2
+$red--light: rgb(255,122,122) // #ff7a7a
+$red: rgb(225,58,58) // #e13a3a
+$red--dark: rgb(199,52,52) // #c73434
 
 // SOCIAL COLORS
 $facebook: rgb(57, 87, 157)
@@ -61,19 +66,16 @@ $google: rgb(220, 74, 56)
 $pinterest: rgb(202, 31, 36)
 $linkedin: rgb(0, 151, 188)
 
-// APPS
-$mailchimp: rgb(119, 207, 242)
-
 // CODE
 .punctuation
-  color: $b-45
+  color: $gray
 
 .string
-  color: rgb(70, 193, 72)
+  color: $green--dark
 
 .boolean
   &--true
-    color: rgb(70, 193, 72)
+    color: $green--dark
 
   &--false
-    color: rgb(224, 80, 80)
+    color: $red--dark

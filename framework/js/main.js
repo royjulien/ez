@@ -38,6 +38,9 @@ var tabSwitch = function (className) {
 
       hash = hash.replace('#', '')
       $('[data-page-name=' + hash + ']').fadeIn(177)
+    } else {
+      $('.' + className + ':first').addClass('active')
+      $('.container:first').fadeIn(177)
     }
   } else {
     $('.' + className + ':first').addClass('active')

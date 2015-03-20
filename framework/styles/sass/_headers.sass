@@ -22,6 +22,19 @@
   /*-------------------------*\
    * PAGE HEADER LAYOUTS
   /*-------------------------*/
+  &--splash
+    +cover($header-splash)
+
+    .bg
+      +bg-cover
+      +bg-fade(rgb(67, 131, 187), 0.85)
+
+    .title
+      +bg-title(50%, $w-90, 89px)
+
+    .subtitle
+      +bg-subtitle($w-60, 34px)
+
   &--tall
     +cover($header-tall)
 
@@ -30,10 +43,10 @@
       +bg-fade(rgb(67, 131, 187), 0.85)
 
     .title
-      +bg-title(50%, $w-90)
+      +bg-title(55%, $w-90, 55px)
 
     .subtitle
-      +bg-subtitle(61%, $w-60)
+      +bg-subtitle($w-60, 21px)
 
   &--short
     +cover($header-short)
@@ -43,17 +56,18 @@
       +bg-fade(rgb(67, 131, 187), 0.85)
 
     .title
-      +bg-title(50%, $w-90)
+      +bg-title(55%, $w-90)
 
     .subtitle
-      +bg-subtitle(61%, $w-60)
+      +bg-subtitle($w-60)
 
   /*-------------------------*\
    * CONTENT HEADER
   /*-------------------------*/
   &--content
+    position: relative
     padding: 20px
-    border-bottom: 1px solid $b-20
+    border-bottom: 1px solid $gray--lighter
 
     +min-width(960px)
       padding: 40px
@@ -62,7 +76,7 @@
       font-size: 28px
 
     .subtitle
-      color: $b-60
+      color: $gray--darkish
       font-size: 16px
 
   /*-------------------------*\
@@ -70,7 +84,7 @@
   /*-------------------------*/
   &--snippet
     height: 55px
-    line-height: 55px
+    line-height: 56px
     padding-left: 20px
     padding-right: 13px
 
@@ -79,5 +93,5 @@
       float: left
       width: 150%
       height: 1px
-      background-color: $b-20
+      background-color: $gray--lighter
 

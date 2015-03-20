@@ -12,7 +12,7 @@
 
   .card
     padding: 20px
-    border: 1px solid $b-20
+    border: 1px solid $gray--lighter
     +transition(border 233ms, box-shadow 233ms)
     cursor: pointer
 
@@ -31,11 +31,14 @@
       margin-bottom: 20px
 
       .icon
-        +app-card-icon($mailchimp)
+        +app-card-icon()
+
+    .name
+      font-weight: $bold
 
     .description
       margin: 7px 0
-      color: $b-70
+      color: $gray--dark
       font-size: 14px
       font-weight: $bold
 
@@ -55,7 +58,7 @@
       float: left
       width: calc(100% - 240px)
       margin-left: 20px
-      border: 1px solid $b-20
+      border: 1px solid $gray--lighter
       overflow: hidden
 
   &--action
@@ -69,7 +72,7 @@
         width: 340px
 
       &:hover
-        border-color: $b-20
+        border-color: $gray--lighter
         +box-shadow(none)
     
     .name
@@ -85,14 +88,57 @@
       .card__item
         height: 45px
         line-height: 45px
-        border-bottom: 1px solid $b-20
+        border-bottom: 1px solid $gray--lighter
         font-weight: $bold
         list-style-type: none
 
         &:last-child
           border-bottom: none
 
+.requirements
+  position: absolute
+  top: 80px
+  right: 40px
+  width: 400px
+  border: 1px solid $gray--lighter
+  +box-shadow(0 0 5px $b-05)
+  background-color: $w
+  overflow: hidden
 
+  &__list
+    padding: 20px
+
+  &__item
+    height: 35px
+    font-size: 14px
+    line-height: 36px
+    list-style-type: none
+
+  .format-icon
+    display: inline-block
+    width: 30px
+    height: 20px
+    background-color: $w
+    border: 1px solid $gray--lighter
+    +border-radius
+    font-size: 10px
+    font-weight: 600
+    line-height: 20px
+    text-align: center
+    text-transform: uppercase
+    margin-right: 10px
+
+    &--blue
+      @extend .format-icon
+      color: $blue
+
+    &--orange
+      @extend .format-icon
+      color: $blood-orange
+
+    &--green
+      @extend .format-icon
+      color: $green--light
 
 
 
