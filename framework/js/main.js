@@ -4,7 +4,8 @@ $(function () {
 
   tabSwitch('link--tab')
   ratings('rating')
-  modal()
+  initModal()
+  modalSectionSwitch('data-section-switch')
   modalSwitch('data-modal-switch')
   checkDummyForm('modal__input')
 })
@@ -91,13 +92,13 @@ ratings = function (className) {
   })
 },
 
-modal = function () {
+initModal = function () {
   // open modal
   $('[data-modal-open]').on('click', function () {
     $('body').addClass('noscroll')
 
     $('.modal__bg').addClass('active').delay(150).queue(function () {
-      $('.modal__container:first, .modal__content:first, .modal__headers .modal__header:first, .modal__headers .modal__header:first .title').addClass('active')
+      $('[data-modal-name=single], .modal__content:first, .modal__headers .modal__header:first, .modal__headers .modal__header:first .title').addClass('active')
       $('.modal__content:gt(0), .modal__header:gt(0) .title').addClass('inactive')
       $.dequeue(this)
     }).delay(50).queue(function () {
@@ -109,31 +110,44 @@ modal = function () {
     })
   })
 
-  // close modal
-  $('.modal__bg, [data-modal-close]').on('click', function () {
+  // close all modals and reset states
+  $('.modal__bg').on('click', function () {
     $('body').removeClass('noscroll')
     $('.modal__container').removeClass('active').delay(300).queue(function () {
       $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
       $.dequeue(this)
     })
   })
+
+  // close current modal
+  $('[data-modal-close]').on('click', function () {
+    $(this).parents('.modal__container').removeClass('active')
+    if ($(this).parents('.modal__container').data('modal-name') === $('.modal__container:first').data('modal-name')) {
+      $('body').removeClass('noscroll')
+      $('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
+    } else {
+      $(this).find('.modal__bg, .modal__content, .modal__header, .modal__header .title').removeClass('passive active')
+    }
+  })
 },
 
-modalSwitch = function (attr) {
+modalSectionSwitch = function (attr) {
   var attrValue, activeContent, activeContentIndex, activeHeader, activeTitle, activateContent, activateContentIndex, activateHeader, activateTitle;
 
-  $('[' + attr + ']').on('click', function () {
-    attrValue = $(this).data('modal-switch')
+  $('[' + attr + ']').on('click', function (e) {
+    e.preventDefault()
+
+    attrValue = $(this).data('section-switch')
 
     activeContent = $('.modal__content.active')
     activeContentIndex = activeContent.index()
     activeHeader = $('.modal__header.active')
     activeTitle = $('.title.active')
 
-    activateContent = $('.modal__content[data-modal-name=' + attrValue + ']')
+    activateContent = $('.modal__content[data-section-name=' + attrValue + ']')
     activateContentIndex = activateContent.index()
-    activateHeader = $('.modal__header[data-modal-name=' + attrValue + ']')
-    activateTitle = $('.modal__header[data-modal-name=' + attrValue + '] .title')
+    activateHeader = $('.modal__header[data-section-name=' + attrValue + ']')
+    activateTitle = $('.modal__header[data-section-name=' + attrValue + '] .title')
 
     if (activeContentIndex < activateContentIndex) {
       activeContent.addClass('passive easeToPassive').removeClass('active').delay(750).queue(function () {
@@ -160,6 +174,17 @@ modalSwitch = function (attr) {
       activateHeader.addClass('active')
       activateTitle.addClass('active').removeClass('passive')
     }
+  })
+},
+
+modalSwitch = function (attr) {
+  var attrValue;
+
+  $('[' + attr + ']').on('click', function (e) {
+    e.preventDefault()
+    attrValue = $(this).data('modal-switch')
+
+    $('[data-modal-name=' + attrValue + '], [data-section-name=' + attrValue + '], [data-section-name=' + attrValue + '] .title').removeClass('inactive').addClass('active')
   })
 },
 

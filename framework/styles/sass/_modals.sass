@@ -13,7 +13,7 @@
     opacity: 0
     visibility: hidden
     z-index: 9
-    +transition(opacity 233ms, visibility 233ms)
+    +transition(opacity 610ms, visibility 610ms)
 
     &.active
       opacity: 1
@@ -25,16 +25,19 @@
     top: 50%
     left: 50%
     width: 620px
-    height: 490px
-    +box-shadow(0 0 0 1px $b-05, 0 0 10px $b-10)
+    height: 100%
+    +box-shadow(0 0 20px $b-20)
     background-color: $gray--lightest
     +backface-visibility
     opacity: 0
     visibility: hidden
     overflow: hidden
     z-index: 10
-    +translate(-50%, -48%)
+    +translate(-50%, -40%)
     +transition(opacity 233ms, transform 233ms, visibility 233ms)
+
+    &:first-of-type
+      +translate(-50%, -48%)
 
     &:before
       content: ''
@@ -83,7 +86,7 @@
       font-weight: $bold
       text-align: center
       text-transform: uppercase
-      +transition(transform 750ms cubic-bezier(0,1,0,1))
+      +transition(transform 750ms cubic-bezier(0,.8,0,1))
 
       &.passive
         +translateX(-40%)

@@ -83,7 +83,7 @@
         </header>
 
         <div class='body'>
-          <button class='blue' data-modal-open>Modal</button>
+          <button class='blue' data-modal-open='single'>Open Modal</button>
         </div>
       </article>
     </section>
@@ -218,40 +218,29 @@
     </section>
   </div>
 
+  <!-- MODALS -->
   <section class='modal'>
     <figure class='modal__bg'></figure>
-    <div class='modal__container'>
 
+    <div class='modal__container' data-modal-name='single'>
       <header class='modal__headers'>
-        <div class='modal__header' data-modal-name='single'>
+        <div class='modal__header' data-section-name='single'>
           <button class='gray--light--borderless left' data-modal-close>X</button>
           <h1 class='title'>Welcome Title</h1>
           <button class='blue--borderless right'>Action</button>
         </div>
 
-        <div class='modal__header' data-modal-name='slide'>
-          <button class='gray--light--borderless left' data-modal-switch='single'><i class='w-icon-chevron-left-light'></i></button>
+        <div class='modal__header' data-section-name='slide'>
+          <button class='gray--light--borderless left' data-section-switch='single'><i class='w-icon-chevron-left-light'></i></button>
           <h1 class='title'>View Title</h1>
-        </div>
-
-        <div class='modal__header' data-modal-name='action'>
-          <button class='blue--borderless left' data-modal-switch='slide'>Cancel</button>
-          <h1 class='title'>Action Title</h1>
-          <button class='blue--borderless right'>Save</button>
-        </div>
-
-        <div class='modal__header' data-modal-name='progress'>
-          <button class='gray--light--borderless left' data-modal-switch='action'><i class='w-icon-chevron-left-light'></i></button>
-          <h1 class='title'>Progress Title</h1>
-          <button class='blue--borderless right'>next</button>
         </div>
       </header>
 
       <div class='modal__contents'>
-        <div class='modal__content' data-modal-name='single'>
+        <div class='modal__content' data-section-name='single'>
           <h2 class='title'>Message goes here.</h2>
           <h3 class='subtitle'>Sub message goes here.</h3>
-          <form class='modal__form'>
+          <form class='modal__form' action='' method='post'>
             <label for='name' class='modal__label'>
               Full Name
               <input type='text' name='name' class='modal__input' placeholder='First and last name'>
@@ -261,11 +250,11 @@
               <input type='text' name='email' class='modal__input' placeholder='name@email.com'>
             </label>
             <button class='modal__button--dropdown' data-value='Selected Option'><i class='w-icon-chevron-right-light right'></i> Options</button>
-            <button class='modal__button' data-value='Secondary text' data-modal-switch='slide'><i class='w-icon-chevron-right-light right'></i> Button</button>
+            <button class='modal__button' data-value='Secondary text' data-section-switch='slide'><i class='w-icon-chevron-right-light right'></i> Button</button>
           </form>
         </div>
 
-        <div class='modal__content' data-modal-name='slide'>
+        <div class='modal__content' data-section-name='slide'>
           <button class='modal__button--action' data-modal-switch='action'>Action Button</button>
           <div class='modal__button--group'>
             <button class='modal__button' data-value='Secondary text'><i class='w-icon-chevron-right-light right'></i> Options</button>
@@ -274,12 +263,30 @@
           </div>
           <button class='modal__button--action--delete'>Delete Button</button>
         </div>
+      </div>
+    </div>
 
-        <div class='modal__content' data-modal-name='action'>
-          <button class='modal__button' data-value='Secondary text' data-modal-switch='progress'><i class='w-icon-chevron-right-light right'></i> Button</button>
+    <div class='modal__container' data-modal-name='action'>
+      <header class='modal__headers'>
+        <div class='modal__header' data-section-name='action'>
+          <button class='blue--borderless left' data-modal-close>Cancel</button>
+          <h1 class='title'>Action Title</h1>
+          <button class='blue--borderless right'>Save</button>
         </div>
 
-        <div class='modal__content' data-modal-name='progress'>
+        <div class='modal__header' data-section-name='progress'>
+          <button class='gray--light--borderless left' data-section-switch='action'><i class='w-icon-chevron-left-light'></i></button>
+          <h1 class='title'>Progress Title</h1>
+          <button class='blue--borderless right'>next</button>
+        </div>
+      </header>
+
+      <div class='modal__contents'>
+        <div class='modal__content' data-section-name='action'>
+          <button class='modal__button' data-value='Secondary text' data-section-switch='progress'><i class='w-icon-chevron-right-light right'></i> Button</button>
+        </div>
+
+        <div class='modal__content' data-section-name='progress'>
           <h2 class='title'>1 of 3 steps left</h2>
           <h3 class='subtitle'>You're almost there!</h3>
         </div>
